@@ -1,0 +1,44 @@
+# ACX GTM Terminal
+
+One install. Every ACX agent.
+
+## Install (one command)
+
+```
+claude plugin marketplace add riddhimaaan/acx-gtm-terminal && claude plugin install acx@acx -y
+```
+
+**Claude Desktop:** Settings, then Plugins, then Add marketplace, and paste `riddhimaaan/acx-gtm-terminal`. Then install **ACX**.
+
+## Start here
+
+```
+/acx:start
+```
+
+That is the router. It reads what the member asks, decides which agent to run, runs it, and carries the result into the next one. The member never has to know which agent to use, and the agents never talk to each other - the router is the link.
+
+## What is inside
+
+| Skill | Use it when |
+|---|---|
+| `start` | always - the router that runs the rest |
+| `market-scanner` | is my market still worth selling into, how crowded is it |
+| `category-gap-finder` | where have competitors left a spot open |
+| `icp-builder` | who should I sell to, pick my niche |
+| `lead-grader` | check this list before I send it |
+| `offer-architect` | fix my offer, what should I charge |
+| `guarantee-designer` | make it safe to buy, risk reversal |
+| `positioning-builder` | my positioning, my one-liner |
+| `message-tester` | does this message land |
+
+## Where your files go
+
+- `ACX/my-business.md` - the member's business details. Every agent reads it, and the router keeps it up to date. Asked once, never twice.
+- `ACX/outputs/` - one file per agent: `market-scan.md`, `gap-finder.md`, `icp.md`, `graded-list.csv`, `offer.md`, `guarantee.md`, `positioning.md`, `message-test.md`.
+
+No API keys are stored in this repo.
+
+## Provenance
+
+Eight of the nine skills are forks of public MIT-licensed agent skills, renamed to the ACX agent names and given an ACX output contract. Sources, licences and what was changed are in [CREDITS.md](CREDITS.md); licence texts are kept verbatim in [`_licences/`](_licences/).

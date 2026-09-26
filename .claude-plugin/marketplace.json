@@ -1,0 +1,16 @@
+{
+  "name": "acx",
+  "owner": {
+    "name": "AcquisitionX"
+  },
+  "metadata": {
+    "description": "The ACX GTM Terminal - every ACX agent in one install."
+  },
+  "plugins": [
+    {
+      "name": "acx",
+      "source": "./plugins/acx",
+      "description": "The ACX GTM Terminal: market, ICP, offer, positioning and message agents, plus the router that runs them in order."
+    }
+  ]
+}
