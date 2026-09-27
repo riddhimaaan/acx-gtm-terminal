@@ -1,6 +1,6 @@
 ---
 name: positioning-builder
-description: Turns everything the member has already decided (their play, who they sell to, their offer and guarantee) into a positioning statement and a one-liner a stranger could repeat. Picks the category on purpose, finds their belief in their own words, and checks each one-liner for "sounds like every competitor" and "a stranger gets it". Use when someone says "write my positioning", "my one-liner", "how do I describe what I do", or runs Module 4 Video 2 of the ACX program.
+description: Shows how real competitors position themselves, then gives the member practical ways to stand apart. Use when someone says "write my positioning", "my one-liner", "how do I describe what I do", or runs Module 4 Video 2 of the ACX program.
 ---
 
 <!--
@@ -14,9 +14,22 @@ Rewritten for the ACX GTM Terminal: agency owners already at revenue. See forks/
 
 **Who this is for:** an agency owner whose buyers do not doubt they can do the work — they doubt they are any different from the next agency. That doubt is what loses deals they should have won.
 
+## How the final answer should feel
+
+Write for a busy business owner, using words a 10-year-old could understand. The analysis can be detailed; the final answer must show a simple contrast between the market and the member's next move.
+
+- Keep the main report to one page.
+- Name real competitors. Never describe a made-up "typical competitor."
+- Use no more than five bullets in each section.
+- Each competitor bullet must say what that company actually claims, in plain words, with a link.
+- Each strategy must be specific enough to use in a website headline, sales conversation, or outreach message.
+- Do not use words such as "positioning statement," "category," "differentiation," or "value proposition." Say "how they talk about themselves" and "how you can stand apart."
+
 ## Step 0: Load what is already decided
 
 Read `ACX/my-business.md`. You need who they sell to, their offer and their guarantee — all decided already. Only ask for what is missing.
+
+Read `ACX/outputs/gap-finder.md` when it exists. Use the named competitors from it. If it does not name enough real competitors, ask the member for them or find real alternatives buyers would consider. Record the exact page and link for every competitor message you use.
 
 ## Step 1: Find what they believe
 
@@ -63,13 +76,29 @@ Go through the statement and the one-liners and delete anything every competitor
 
 ## What to write
 
-Save to `ACX/outputs/positioning.md`: the five blanks, the category chosen and why, the positioning statement, the three one-liners with their test results, and the words cut. Put their one-liner at the top.
+Save to `ACX/outputs/positioning.md` using this exact shape:
+
+```md
+# How most competitors are positioning themselves
+
+- [Named competitor]: [simple breakdown of what it says it does, with link]
+- [Named competitor]: [simple breakdown of what it says it does, with link]
+- [Named competitor]: [simple breakdown of what it says it does, with link]
+
+# How you should position yourself for a competitive edge
+
+- [Practical strategy to stand apart]
+- [Practical strategy to stand apart]
+- [Practical strategy to stand apart]
+```
+
+Keep the five blanks, chosen category, one-liner drafts, and swap-test notes in research notes. The main report should contain only the competitor breakdown and the strategies the member can use.
 
 Then stop. The next step is testing that message on real buyers' terms.
 
 ## Things you must never do
 
-- Write a statement that would fit any audience. If it fits everyone it guides nothing.
+- Write a strategy that would fit any audience. If it fits everyone it guides nothing.
 - Claim uniqueness they cannot support.
 - Use the words every competitor uses.
 - Name the market leader and attack them. That only reminds buyers who the leader is.

@@ -15,6 +15,18 @@ See forks/CREDITS.md.
 
 **Who this is for:** an agency owner, consultant or service operator who is already making money. Work has stopped paying off and they want to know whether the problem is them or the market. They are not a beginner and they do not need the basics explained.
 
+## How the final answer should feel
+
+Write for a busy business owner, using words a 10-year-old could understand. The research can be detailed; the final answer must not be.
+
+- Put the answer first.
+- Keep the main report to one page.
+- Use one idea per sentence and short headings that ask a real question.
+- Show only the two strongest pieces of proof for each score. Keep the links beside the proof.
+- Explain every score in plain words. The number is a signpost, not the answer.
+- End with no more than three actions the member can take next.
+- Do not use words such as "market saturation," "demand signals," or "positioning whitespace." Say "too many sellers," "people are paying," and "an open spot."
+
 ## Step 0: Get the two things you need
 
 You need the member's **market** and **who they sell to**. Both live in `ACX/my-business.md`. Read it first. Only ask for what is genuinely missing, and write what you learn back into that file.
@@ -82,7 +94,42 @@ One line: **can this market take me to the next level, yes or no — and why.** 
 
 ## What to write
 
-Save to `ACX/outputs/market-scan.md`: the scope line, the three scores with their evidence, the two traps, and the verdict. Put the member's one-liner at the top: **can this market take me to the next level — yes or no, and why.**
+Save to `ACX/outputs/market-scan.md` using this exact shape:
+
+```md
+# Is this market worth pursuing?
+
+## Short answer
+Yes / No — [one plain sentence saying why].
+
+## What we checked
+
+### Are people paying? [score]/10
+[One plain sentence explaining the score.]
+- [Strong proof with link]
+- [Strong proof with link]
+
+### Is there room for us? [score]/10
+[One plain sentence explaining the score.]
+- [Strong proof with link]
+- [Strong proof with link]
+
+### Is there an open spot? [score]/10
+[One plain sentence explaining the score.]
+- [Strong proof with link]
+- [Strong proof with link]
+
+## What could go wrong?
+- [One real risk or missing fact.]
+- [One real risk or missing fact.]
+
+## What to do next
+1. [Practical action.]
+2. [Practical action.]
+3. Run `category-gap-finder` to test the open spot.
+```
+
+The research notes may contain more detail, but do not put them in the main report. Keep the scope line in the research notes unless it makes the short answer clearer.
 
 Then stop. The next step is finding where the openings are.
 

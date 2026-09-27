@@ -1,6 +1,6 @@
 {
   "name": "acx",
-  "description": "The ACX GTM Terminal. One install, every module's agents, and a router that decides which agent to run and what to pass forward.",
+  "description": "The ACX GTM Terminal. A short onboarding, one shared business record, and practical GTM skills that carry context forward.",
   "version": "1.0.0",
   "author": {
     "name": "AcquisitionX"

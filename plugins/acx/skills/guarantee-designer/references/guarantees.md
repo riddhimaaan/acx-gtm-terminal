@@ -1,31 +1,31 @@
 # Guarantees: Reversing Risk to Close the Deal
 
-The guarantee is one of the most powerful yet underutilized elements of a Grand Slam Offer. Most businesses either offer no guarantee (forcing the customer to bear all the risk) or offer a weak, generic money-back guarantee that does little to differentiate. A well-designed guarantee does more than reduce risk -- it demonstrates confidence, attracts better customers, and counterintuitively reduces refund rates. This reference covers the five guarantee types, naming strategies, stacking approaches, the psychology of guarantees, and legal considerations.
+A guarantee can reduce a buyer's perceived risk when it is clear, affordable to honour, and matched to how the offer is delivered. Its effect on conversion, refund requests, and customer quality must be measured from the member's own records; this reference does not supply benchmark outcomes.
 
 ## The Psychology of Risk in Buying Decisions
 
 ### Why Prospects Don't Buy
 
-When a prospect decides not to buy, it is almost never because the price is too high in absolute terms. It is because the perceived risk exceeds the perceived value. Every purchase carries multiple types of risk:
+When a prospect decides not to buy, price and perceived risk can both be factors. Every purchase can carry multiple types of risk:
 
 | Risk Type | What the Prospect Fears | Example Internal Monologue |
 |-----------|------------------------|---------------------------|
-| **Financial risk** | Losing money | "What if it doesn't work and I'm out $5,000?" |
-| **Time risk** | Wasting time | "What if I spend 3 months on this and it fails?" |
+| **Financial risk** | Losing money | "What if it doesn't work and I'm out [amount]?" |
+| **Time risk** | Wasting time | "What if I spend [timeframe] on this and it fails?" |
 | **Reputation risk** | Looking foolish | "What will my team/spouse/friends think if this doesn't work?" |
 | **Effort risk** | Investing energy for nothing | "What if I put in all the work and nothing changes?" |
 | **Opportunity cost** | Missing a better option | "What if something better comes along next month?" |
 | **Identity risk** | Being "that person" | "Am I the kind of person who buys things like this?" |
 
-A guarantee systematically addresses these risks by saying: "You cannot lose. The worst case scenario is that you end up exactly where you are now."
+A guarantee can address a defined risk by clearly stating what happens if a specific outcome is not met. It must not promise that the buyer "cannot lose" unless that is literally true under its written terms.
 
-### The Guarantee Paradox
+### What To Measure Before Making A Guarantee Stronger
 
-Stronger guarantees lead to fewer refund requests, not more. This seems counterintuitive, but there are three reasons:
+Do not assume a stronger guarantee will improve conversion or reduce refund requests. Compare the member's own data before and after a change, and review these possible factors:
 
-1. **Confidence signal:** A strong guarantee signals that the seller is confident in their product. This makes the buyer more confident too, which leads to better effort and better results.
-2. **Customer quality:** Strong guarantees attract decisive, committed buyers who are confident they will succeed. Weak guarantees (or no guarantees) attract tentative, risk-averse buyers who are more likely to quit.
-3. **Cognitive dissonance:** Once someone buys, they want to believe they made a good decision. A guarantee removes the anxiety that would cause them to second-guess, so they invest more fully in the process.
+1. **Confidence signal:** Does a clearer promise make qualified buyers more comfortable proceeding?
+2. **Customer fit:** Does the guarantee attract or deter buyers who can meet its conditions?
+3. **Delivery behaviour:** Do the terms help clients take the actions required for the result?
 
 ## The Five Guarantee Types
 
@@ -35,23 +35,23 @@ Stronger guarantees lead to fewer refund requests, not more. This seems counteri
 
 **How it works:** The customer can request a refund for any reason during the guarantee period and receive their money back with no friction.
 
-**Best for:** Low to mid-ticket products and services ($50-$2,000), first-time buyers, markets with high skepticism, e-commerce products.
+**Consider when:** Delivery costs are low enough to absorb refunds, buyers are new to the business, and the member can honour the terms in a bad month.
 
 **Strengths:**
-- Eliminates financial risk completely
+- Protects the amount covered by the written terms
 - Simplest to communicate
-- Highest conversion lift (reduces barrier to yes)
-- Legally straightforward
+- May reduce the barrier to yes; measure whether it changes conversion for this offer
+- Still needs clear terms and appropriate legal review
 
 **Weaknesses:**
-- Attracts some "tire kickers" who never intended to keep the product
+- Does not require a client action or result before a refund is available
 - Does not filter for commitment or effort
-- Higher refund rates than conditional guarantees (but still typically 5-15%)
+- May create more refund exposure than a conditional guarantee; use the member's own refund history or mark the exposure unknown
 
 **Examples:**
-- "30-Day Money-Back Guarantee. If you're not satisfied for any reason, email us for a full refund."
-- "Try it for 60 days. Love it or get every penny back."
-- "100% Satisfaction Guarantee. No hoops. No fine print."
+- "[Verified guarantee period] money-back guarantee. If you are not satisfied for any reason, email us for the stated refund."
+- "Try it for [verified guarantee period]. If the terms are met, we [the stated remedy]."
+- "Satisfaction guarantee: [state the verified scope and remedy]."
 
 ### Type 2: Conditional Guarantee
 
@@ -59,13 +59,13 @@ Stronger guarantees lead to fewer refund requests, not more. This seems counteri
 
 **How it works:** The customer must demonstrate that they did the work (completed the modules, attended the calls, implemented the steps). If they did the work and did not get results, they receive a refund.
 
-**Best for:** High-ticket offers ($2,000+), coaching programs, courses, services where customer effort affects outcomes.
+**Consider when:** A client action is genuinely required for the outcome and the member can track that action without making the terms unreasonable.
 
 **Strengths:**
-- Filters for committed buyers (people who will not do the work self-select out)
-- Much lower refund rates than unconditional (typically 2-5%)
-- Customers who meet the conditions almost always get results (making refunds rare)
-- Demonstrates that the offer works when the customer engages
+- States the client actions required before a refund is available
+- May limit refund eligibility when the conditions are reasonable and clearly communicated
+- Whether clients who meet the conditions get results must be supported by the member's own delivery records
+- Creates a record of whether clients who meet the conditions get the stated result
 
 **Weaknesses:**
 - Slightly more complex to communicate
@@ -73,32 +73,32 @@ Stronger guarantees lead to fewer refund requests, not more. This seems counteri
 - Some prospects perceive conditions as "fine print" (address this head-on)
 
 **Examples:**
-- "Complete all 8 modules and implement the strategies. If you don't see at least a 2x return within 90 days, we'll refund 100%."
-- "Attend all 12 coaching calls and do the homework. If you're not satisfied with your progress, full refund."
-- "Use the system for 90 days. If you follow the steps and don't land 3 new clients, we'll give you your money back."
+- "Complete [the required actions]. If you do not get [the verified outcome] within [the verified timeframe], we [the stated remedy]."
+- "Attend [the required sessions] and complete [the required work]. If you do not get [the verified outcome], we [the stated remedy]."
+- "Use the system for [the verified timeframe]. If you follow [the stated steps] and do not get [the verified outcome], we [the stated remedy]."
 
 **How to present conditions ethically:**
 - Frame conditions as the customer's roadmap to success, not as escape-prevention
-- "We know this works when you engage. That's why we guarantee: complete the program and get results, or get your money back."
-- Make conditions reasonable and achievable (if 95% of customers can meet them, they're fair)
+- "The conditions are: [required actions]. If you meet them and do not get [the verified outcome], we [the stated remedy]."
+- Make conditions reasonable and achievable. Check them against the member's actual delivery process and client records; do not set an arbitrary completion threshold.
 
 ### Type 3: Anti-Guarantee
 
 **What it is:** Explicitly stating that there is no refund. All sales are final.
 
-**How it works:** By removing the safety net, you create a "burned bridges" effect. The customer is fully committed, which paradoxically leads to better effort and better results.
+**How it works:** By removing the safety net, the customer bears more of the risk. Do not assume this changes their effort or results.
 
-**Best for:** High-demand offers with limited availability, luxury and prestige products, situations where brand strength is sufficient, experienced customers who know what they want.
+**Consider only when:** The member has evidence that buyers accept all-sales-final terms and has confirmed the terms are lawful for their jurisdiction.
 
 **Strengths:**
-- Maximum customer commitment (no escape hatch = full effort)
-- Signals exclusivity and confidence
-- Zero refund management costs
-- Works when demand exceeds supply
+- No contractual refund under the stated terms
+- Makes the commercial terms explicit
+- May reduce the number of refund requests, but legal and customer-support costs can still exist
+- May be considered only when the member has evidence that buyers accept these terms
 
 **Weaknesses:**
-- Only works when your brand, social proof, or demand is strong enough
-- Reduces conversion rate (some fence-sitters will not buy)
+- Requires evidence that buyers will accept the terms
+- May deter some qualified buyers; measure this before treating it as a good trade-off
 - Requires more upfront trust-building
 
 **Examples:**
@@ -112,36 +112,36 @@ Stronger guarantees lead to fewer refund requests, not more. This seems counteri
 
 **How it works:** Instead of a formal guarantee, you stack so much proof and credibility that the prospect feels safe without one.
 
-**Best for:** Established brands with strong reputations, subscription products with monthly cancel options, free trial offers (the trial itself is the guarantee).
+**Consider when:** The member has verified proof that buyers already trust the business, or a trial or cancellation policy provides a clearly stated alternative safety mechanism.
 
 **Strengths:**
 - No formal refund obligations
-- Works naturally when trust is already high
-- Avoids the "refund conversation" entirely
+- May be considered when the member has evidence that buyers already trust the business
+- Does not create a formal refund promise
 
 **Weaknesses:**
 - Does not actively overcome risk objections
-- Weaker conversion lift than explicit guarantees
+- May leave risk objections unresolved; compare it with an explicit guarantee using the member's own results
 - Relies on existing trust
 
 **Examples:**
-- "Join 50,000+ marketers who trust [Product] every day. Cancel anytime."
-- "Free for 14 days. No credit card required. See why 97% of trial users become paying customers."
-- "Rated 4.9/5 by 2,000+ customers. See their stories below."
+- "Join [verified customer count] marketers who trust [Product] every day. Cancel anytime."
+- "Free for [verified trial period]. No credit card required. See verified customer stories below."
+- "Rated [verified rating] by [verified review count] customers. See their stories below."
 
 ### Type 5: Performance-Based Guarantee
 
 **What it is:** You guarantee a specific, measurable outcome. If the outcome is not achieved, the customer receives a refund, credit, or continued service at no charge.
 
-**How it works:** You tie your compensation directly to results. This is the ultimate risk reversal because the customer literally cannot lose money unless they also get results.
+**How it works:** You tie some or all compensation to a defined result. The written terms must state exactly what is covered, what the client must do, and which costs remain payable.
 
-**Best for:** Agency services, consulting, any offer where you control or heavily influence the outcome, high-ticket B2B services.
+**Consider when:** The outcome is measurable, the member can materially influence it, the client obligations are observable, and the worst-case cost is affordable.
 
 **Strengths:**
-- Strongest possible risk reversal
-- Massive differentiation (very few competitors offer this)
-- Highest trust-building power
-- Attracts the most committed and qualified buyers
+- Makes the covered outcome and remedy explicit
+- May differentiate the offer; verify what comparable offers promise before claiming this
+- May affect buyer trust; measure the effect for this offer
+- Buyer fit must be evaluated from the member's own sales and delivery records
 
 **Weaknesses:**
 - Requires confidence in your ability to deliver
@@ -150,13 +150,13 @@ Stronger guarantees lead to fewer refund requests, not more. This seems counteri
 - Higher operational complexity
 
 **Examples:**
-- "We guarantee 50 qualified leads in 90 days. If we fall short, we work for free until we deliver."
-- "Our SEO program guarantees page-one rankings for 5 target keywords within 6 months, or we continue working at no charge until we get there."
-- "If our sales training doesn't increase your team's close rate by at least 20% within 60 days, you pay nothing."
+- "We guarantee [the verified outcome] within [the verified timeframe]. If we fall short, we [the stated remedy]."
+- "Our program guarantees [the verified outcome] within [the verified timeframe], or we [the stated remedy]."
+- "If our service does not produce [the verified outcome] within [the verified timeframe], you [the stated payment or remedy]."
 
 ## Naming Your Guarantee
 
-A named guarantee feels proprietary and memorable. It becomes part of your brand.
+A named guarantee may be easier to remember. Test the name with the member's target buyers rather than assuming it changes demand.
 
 ### Naming Examples
 
@@ -164,8 +164,8 @@ A named guarantee feels proprietary and memorable. It becomes part of your brand
 |---------|--------------|-----------------|
 | "Money-back guarantee" | "The Results-or-Free Guarantee" | Focuses on the outcome, not the refund |
 | "Satisfaction guarantee" | "The 'Love It or Leave It' Promise" | Sounds confident and conversational |
-| "30-day guarantee" | "The 30-Day Test Drive" | Reframes it as an experience, not a risk |
-| "Performance guarantee" | "The Triple-Your-Pipeline Guarantee" | Names the specific result |
+| "[guarantee period] guarantee" | "The [Guarantee Period] Test Drive" | Reframes it as an experience, not a risk |
+| "Performance guarantee" | "The [Verified Outcome] Guarantee" | Names the specific result |
 | "Risk-free trial" | "The Zero-Risk Launchpad" | Sounds like an opportunity, not a safety net |
 
 ### Naming Formula
@@ -173,10 +173,10 @@ A named guarantee feels proprietary and memorable. It becomes part of your brand
 **[Emotion/Action] + [Specific Result or Timeframe] + [Guarantee/Promise/Pledge]**
 
 Examples:
-- "The No-Questions 90-Day Money-Back Promise"
-- "The Double-Your-Revenue Guarantee"
+- "The No-Questions [Guarantee Period] Money-Back Promise"
+- "The [Verified Outcome] Guarantee"
 - "The Risk-Free Launch Pledge"
-- "The 'You'll Love It' 60-Day Promise"
+- "The '[Verified Outcome]' [Guarantee Period] Promise"
 
 ## Stacking Guarantees
 
@@ -186,18 +186,18 @@ You can stack multiple guarantees to address multiple risk types simultaneously.
 
 | Layer | Guarantee | Risk Addressed |
 |-------|-----------|---------------|
-| **Layer 1** | "30-Day Unconditional Money-Back Guarantee" | Financial risk ("What if I don't like it?") |
-| **Layer 2** | "90-Day Results Guarantee: Complete the program, if no results, full refund" | Performance risk ("What if it doesn't work?") |
-| **Layer 3** | "Lifetime Access Guarantee: Your access never expires" | Time risk ("What if I fall behind?") |
+| **Layer 1** | "[Guarantee period] unconditional money-back guarantee" | Financial risk ("What if I don't like it?") |
+| **Layer 2** | "[Guarantee period] results guarantee: [required action], [verified outcome], [stated remedy]" | Performance risk ("What if it doesn't work?") |
+| **Layer 3** | "[Access period] access guarantee: [state access terms]" | Time risk ("What if I fall behind?") |
 
 ### Stacking Presentation
 
 Present stacked guarantees as layers of protection:
 
-"You're protected three ways:
-1. **Try risk-free for 30 days.** Not happy for any reason? Full refund, no questions.
-2. **Get results or don't pay.** Complete the program. If you don't see [specific result], we refund every penny.
-3. **Never lose access.** Life gets busy. Your access is forever. Come back whenever you're ready."
+"You are protected in these stated ways:
+1. **Try it for [verified period].** If the stated terms are met, we provide [the stated remedy].
+2. **Get [verified outcome] or [stated remedy].** Complete [required actions]. If you do not get [verified outcome], we [stated remedy].
+3. **Keep access for [verified access period].** Your access terms are: [state terms]."
 
 ## Legal Considerations
 
@@ -207,17 +207,17 @@ Present stacked guarantees as layers of protection:
 - **FTC compliance (US):** Guarantees are considered advertising claims. You must honor them as stated. Failure to honor guarantees can result in FTC enforcement action.
 - **Document everything.** Keep records of guarantee terms, conditions, and all refund requests and resolutions.
 - **Clear terms.** The conditions of the guarantee must be clearly stated before purchase, not buried in fine print.
-- **Reasonable conditions.** Conditional guarantee requirements must be reasonable and achievable. Requiring someone to "complete all 47 modules, attend all 52 calls, and submit weekly reports for 12 months" is not reasonable.
+- **Reasonable conditions.** Conditional guarantee requirements must be reasonable and achievable. Compare them with the member's actual delivery process and client records; do not set an arbitrary completion threshold.
 
 ### Structuring Guarantee Terms
 
 | Element | What to Include | Example |
 |---------|----------------|---------|
-| **Duration** | How long the guarantee lasts | "Within 90 days of purchase" |
-| **Conditions** | What the customer must do (if conditional) | "Complete all 8 modules and attend 4 of 6 live calls" |
-| **Outcome metric** | The specific result guaranteed (if performance-based) | "At least 20 qualified leads" |
+| **Duration** | How long the guarantee lasts | "Within [verified period] of purchase" |
+| **Conditions** | What the customer must do (if conditional) | "Complete [required actions]" |
+| **Outcome metric** | The specific result guaranteed (if performance-based) | "At least [verified outcome]" |
 | **Refund process** | How to claim the guarantee | "Email support@company.com with your completion certificate" |
-| **Refund method** | How the refund is delivered | "Full refund to original payment method within 10 business days" |
+| **Refund method** | How the refund is delivered | "[Stated refund] to [payment method] within [verified processing period]" |
 | **Exclusions** | What is not covered (if any) | "Does not cover third-party costs (ad spend, software subscriptions)" |
 
 ## Guarantee Design Checklist
@@ -245,8 +245,8 @@ Write out five versions of your guarantee -- one for each type (unconditional, c
 
 ### Exercise 3: Name Your Guarantee
 
-Using the naming formula, create 5 candidate names for your guarantee. Test them with 10 people in your target market. Which one resonates most? Which one makes them feel the safest?
+Using the naming formula, create candidate names for the guarantee. Test them with an agreed sample of target buyers and record what each person understood; do not assume a name resonates without that evidence.
 
 ### Exercise 4: Financial Modeling
 
-Assume a 10% refund rate under your proposed guarantee. Model the revenue impact over 12 months. Now model the conversion increase from adding the guarantee (typically 15-30% lift). Compare the two. In almost every case, the conversion lift dramatically exceeds the refund cost.
+Use the member's own refund rate, close rate, delivery cost, and client volume to model the financial impact over 12 months. If any input is unavailable, label it unknown and show the formula without a result. Do not assume a conversion increase: measure the change after the guarantee is introduced, then compare the additional revenue against refund and delivery costs.

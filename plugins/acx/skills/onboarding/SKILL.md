@@ -1,0 +1,75 @@
+---
+name: onboarding
+description: "Sets up ACX for a new member. Creates the shared business file, asks only the facts the first skills need, and records optional tools without forcing any connection. Use when a member says \"set me up\", \"onboarding\", \"start ACX\", or when the start skill finds no ACX/my-business.md file."
+---
+
+# ACX Onboarding
+
+## What this does
+
+Set up the member once, in plain language. By the end, these files exist:
+
+```text
+ACX/
+  my-business.md
+  setup-status.md
+  outputs/
+```
+
+Do not create any files outside the member's working folder. Do not save API keys, passwords, or private links in any ACX file.
+
+## How to speak
+
+- Write so a 10-year-old could follow it.
+- Ask two questions at a time, then wait for the answer.
+- Do not make the member connect tools they do not need today.
+- Do not ask about price, revenue, or a lead list during onboarding.
+- Do not make up missing facts. Write `Not known yet` instead.
+
+## Step 1: Check what already exists
+
+1. If `ACX/my-business.md` exists, read it.
+2. Ask one short question: `Do you want to update anything about your business?`
+3. If the answer is no, read `ACX/setup-status.md` if it exists, update only what changed, then stop.
+4. If the business file does not exist, create the `ACX` and `ACX/outputs` folders and continue.
+
+## Step 2: Ask about the business
+
+Ask these in pairs. Use the member's own words when saving the answers.
+
+1. What do you sell, and what result do you help clients get?
+2. Who usually buys it?
+3. Which countries or regions do you sell in?
+4. What are your website and LinkedIn link, if you have them?
+5. Tell me about up to three clients you enjoyed helping. What did you do for each one?
+6. Which businesses do buyers compare you with, including doing it themselves or doing nothing?
+7. What do you believe about this market that most people get wrong?
+
+Do not ask a question whose answer is already in the business file.
+
+## Step 3: Check optional tools
+
+Read `references/tools.md`. Tell the member: `You do not need to connect anything to start. These are only useful when you need them.`
+
+Ask which of these they already use:
+
+- Google Drive or Google Sheets
+- Apify
+- A web-research tool already available in their chat
+
+Record only `available`, `not connected`, or `not needed yet` in `ACX/setup-status.md`. Never request, receive, or store an API key during onboarding.
+
+## Step 4: Save and finish
+
+1. Create `ACX/my-business.md` from `references/my-business-template.md`.
+2. Create `ACX/setup-status.md` from `references/setup-status-template.md`.
+3. Show a short summary of what was saved and ask the member to correct anything wrong.
+4. End with: `You are ready. Tell me what you want to work on, or run /acx:start.`
+
+## When another skill needs a tool
+
+- Use ordinary web research first for market, competitor, and positioning work.
+- Use Google Drive only when the member wants to read or save a Google Sheet or Drive file.
+- Use Apify only when normal web research cannot gather the required public data. Explain any expected cost and get a yes before running it.
+- This plugin does not send outreach, enrich contacts, verify emails, or run campaigns. Do not connect a sending, enrichment, CRM, or automation API for these skills.
+

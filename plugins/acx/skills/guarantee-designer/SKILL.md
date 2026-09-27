@@ -1,6 +1,6 @@
 ---
 name: guarantee-designer
-description: Reads the member's offer and designs 3 guarantees that fit how they deliver (safe, tied to the result, bold). For each one it shows the client's conditions, what it costs if they miss, whether they can afford it, and the price it lets them charge. Recommends one and writes it into the offer. Use when someone says "add a guarantee", "risk reversal", "make it safe to buy", "money-back guarantee", or runs Module 3 Video 3 of the ACX program.
+description: Reads the member's offer and designs 3 guarantees that fit how they deliver: safe, tied to the result, and bold. Use when someone says "add a guarantee", "risk reversal", "make it safe to buy", "money-back guarantee", or runs Module 3 Video 3 of the ACX program.
 ---
 
 <!--
@@ -13,6 +13,12 @@ Rewritten for the ACX GTM Terminal: agency owners already at revenue. See forks/
 **The rule that matters most:** only offer a guarantee they can honour in a bad month. One they cannot pay is worse than none.
 
 **Who this is for:** an agency owner whose buyers go quiet at the price. Most of the time the block is not the price, it is the risk — "what if it does not work and I have wasted the money".
+
+## How the final answer should feel
+
+The final answer must contain only a heading and a list of guarantees. Do not add explanations, prices, calculations, conditions sections, recommendations, or next steps.
+
+Each guarantee must be one short, plain sentence. Include any essential client condition inside that sentence.
 
 ## Step 0: Get the delivery facts
 
@@ -48,9 +54,9 @@ Use their real numbers. If they do not know their refund rate, say the number is
 
 The usual picture: a guarantee lifts how many people say yes, and lifts refunds a little. If the first lift is bigger than the second, it is worth it. Say which way their numbers point.
 
-## Step 3: Show what each one unlocks
+## Step 3: Check each promise is honest
 
-For each shape, one line: the price it lets them charge. A specific, real guarantee lets them charge more. A vague one does not.
+For each shape, make sure the result, timeframe, client condition, and remedy are clear enough to honour exactly as written.
 
 ## Step 4: Recommend the one that matches how they deliver
 
@@ -72,14 +78,24 @@ Then name it after the outcome, not the refund. "The 20-Calls Guarantee" beats "
 
 ## What to write
 
-Save to `ACX/outputs/guarantee.md`: the three shapes, the maths for each, what each unlocks, the one recommended and why, and the guarantee written in one sentence. Put their one-liner at the top: **the guarantee, and the price it lets me charge.**
+Save to `ACX/outputs/guarantee.md` using this exact shape:
+
+```md
+# Guarantees
+
+- [Safe guarantee written in one plain sentence.]
+- [Result-based guarantee written in one plain sentence.]
+- [Bold guarantee written in one plain sentence.]
+```
+
+Keep the delivery facts and affordability checks out of the saved member-facing output.
 
 Then stop. The offer and the guarantee are settled. Next is how they say it.
 
 ## Things you must never do
 
 - Invent a refund rate, a cost to deliver or a close rate.
-- Assume they can afford a promise — ask, and write the answer down.
+- Assume they can afford a promise — ask, and check it before writing the guarantee.
 - Offer a guarantee they cannot pay in a bad month.
 - Copy a competitor's guarantee.
 - Write conditions so heavy that nobody would ever qualify.

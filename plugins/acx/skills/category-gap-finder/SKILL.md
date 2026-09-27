@@ -14,6 +14,19 @@ Rewritten for the ACX GTM Terminal: agency owners already at revenue. See forks/
 
 **Who this is for:** an agency owner who is already selling, has found their market can take them further, and now wants to know where to stand so they stop competing on price.
 
+## How the final answer should feel
+
+Write for a busy business owner, using words a 10-year-old could understand. The research can be detailed; the final answer must be short and easy to act on.
+
+- Put the chosen opening first, in one plain sentence.
+- Keep the main report to one page.
+- Use "open spot" instead of "gap," and "other choices buyers have" instead of "competitors" when it is clearer.
+- Show only the two strongest pieces of buyer proof for each open spot. Keep the links beside the proof.
+- Include no more than three open spots that passed and three that were rejected.
+- Say exactly why each rejected spot is a bad bet.
+- End with no more than three practical next actions.
+- Do not use words such as "category creation," "white space," or "competitive differentiation." Say "a new place to stand," "an open spot," and "why buyers would pick us."
+
 ## Step 0: Get the same two things the Scanner used
 
 The member's **market** and **who they sell to**, from `ACX/my-business.md`. Use the same ones as the market scan so the two results line up.
@@ -65,7 +78,41 @@ Then check the play against the demand found in the market scan. Heavy demand pl
 
 ## What to write
 
-Save to `ACX/outputs/gap-finder.md`: the map, the open spots that passed, the ones crossed out **with the reason**, and the choice. Put their one-liner at the top: **which spot I am taking, and why nobody else is there.**
+Save to `ACX/outputs/gap-finder.md` using this exact shape:
+
+```md
+# Where should we stand out?
+
+## Short answer
+We should own [the open spot] because [one plain reason buyers would care].
+
+## The other choices buyers have
+- [Named competitor or in-house option]: [what they offer in plain words]
+- [Named competitor or do-nothing option]: [what they offer in plain words]
+- [Named competitor]: [what they offer in plain words]
+
+## The open spots worth looking at
+
+### [Open spot]
+Why buyers want it: [one plain sentence.]
+- [Strong buyer proof with link]
+- [Strong buyer proof with link]
+Can we deliver it? Yes / No — [one plain reason.]
+
+### [Second open spot, only if it passed]
+[Use the same short shape.]
+
+## What we are not doing
+- [Rejected spot] — [why it is a bad bet: no one pays, buyers do not ask for it, or we cannot deliver it.]
+- [Rejected spot] — [reason.]
+
+## What to do next
+1. [Practical action.]
+2. [Practical action.]
+3. Run `icp-builder` to decide exactly who to sell this to.
+```
+
+Keep the full competitor map and all rejected ideas in research notes. The main report should only contain what the member needs to choose a direction.
 
 Then stop. The next step is who exactly to sell it to.
 

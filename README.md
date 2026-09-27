@@ -13,10 +13,18 @@ claude plugin marketplace add riddhimaaan/acx-gtm-terminal && claude plugin inst
 ## Start here
 
 ```
+/acx:onboarding
+```
+
+This asks a few plain questions about the member's business and creates their shared ACX folder. No external tool or API key is needed to begin.
+
+Then run:
+
+```
 /acx:start
 ```
 
-That is the router. It reads what the member asks, decides which agent to run, runs it, and carries the result into the next one. The member never has to know which agent to use, and the agents never talk to each other - the router is the link.
+That is the router. It reads what the member asks, chooses the right skill, and carries useful context into the next step.
 
 ## What is inside
 
@@ -27,7 +35,7 @@ That is the router. It reads what the member asks, decides which agent to run, r
 | `category-gap-finder` | where have competitors left a spot open |
 | `icp-builder` | who should I sell to, pick my niche |
 | `lead-grader` | check this list before I send it |
-| `offer-architect` | fix my offer, what should I charge |
+| `offer-architect` | fix my offer, make it easier to understand |
 | `guarantee-designer` | make it safe to buy, risk reversal |
 | `positioning-builder` | my positioning, my one-liner |
 | `message-tester` | does this message land |
@@ -35,6 +43,7 @@ That is the router. It reads what the member asks, decides which agent to run, r
 ## Where your files go
 
 - `ACX/my-business.md` - the member's business details. Every agent reads it, and the router keeps it up to date. Asked once, never twice.
+- `ACX/setup-status.md` - which optional tools are available. No keys are stored here.
 - `ACX/outputs/` - one file per agent: `market-scan.md`, `gap-finder.md`, `icp.md`, `graded-list.csv`, `offer.md`, `guarantee.md`, `positioning.md`, `message-test.md`.
 
 No API keys are stored in this repo.

@@ -22,7 +22,7 @@ Get the exact words. Positioning statement, one-liner, a cold email, a homepage 
 
 ## Step 1: Build 10 buyers from their ICP
 
-Use the ICP in `ACX/my-business.md`. Make them different from each other in the ways that matter, and give each one:
+Use the ICP in `ACX/outputs/icp.md`. If it does not exist, stop and ask the member to run `icp-builder` first. Make the sample buyers different from each other in the ways that matter, and give each one:
 
 - what they care about
 - what makes them doubt a supplier
