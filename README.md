@@ -39,6 +39,7 @@ That is the router. It reads what the member asks, chooses the right skill, and 
 | `guarantee-designer` | make it safe to buy, risk reversal |
 | `positioning-builder` | my positioning, my one-liner |
 | `message-tester` | does this message land |
+| `outlier-finder` | find LinkedIn content angles from posts already working in my niche |
 
 ## Where your files go
 

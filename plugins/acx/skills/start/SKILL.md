@@ -39,6 +39,7 @@ Then check for `my-business.md` in that ACX workspace.
 | 6 | `guarantee-designer` | buyers hesitate at the risk, or they ask how to make buying safe | three short guarantees they can honour |
 | 7 | `positioning-builder` | they want to know how competitors position themselves or how to stand apart | a simple competitor breakdown and practical ways to stand apart |
 | 8 | `message-tester` | they have written a message and want to know whether it lands | what sample buyers understood, what confused them, and a clearer version |
+| 9 | `outlier-finder` | they want to see what LinkedIn content is already working in their niche | recent post outliers, the patterns behind them, and usable content angles |
 
 Run them in that order while the member works through the program. When they ask for one thing on its own, run just that one - but tell them what it leans on, and offer to run that first if it is missing.
 
