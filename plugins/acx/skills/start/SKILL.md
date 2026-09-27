@@ -15,11 +15,17 @@ The member will not know which agent to use. You decide. Read what they ask, pic
 
 ## First time here?
 
-Check for `ACX/my-business.md` before doing anything else.
+Choose the ACX workspace before doing anything else:
 
-- If it does not exist, run the `onboarding` skill first. It creates the `ACX` folder, saves the member's basic business details, and records which optional tools are available.
+- If the member opened Cowork in a specific folder, use `[that folder]/ACX`.
+- If they did not open a folder, use `~/ACX`.
+- Tell the member the exact folder in one short sentence when onboarding creates it.
+
+Then check for `my-business.md` in that ACX workspace.
+
+- If it does not exist, run the `onboarding` skill first. It creates the workspace, saves the member's basic business details, and records which optional tools are available.
 - Do not start market research, list grading, or any other skill until onboarding has saved the business file.
-- If it already exists, read it and the relevant file in `ACX/outputs/` before asking a question. Do not ask for the same fact twice.
+- If it already exists, read it and the relevant file in its `outputs/` folder before asking a question. Do not ask for the same fact twice.
 
 ## The agents, in order
 

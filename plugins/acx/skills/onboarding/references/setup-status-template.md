@@ -2,6 +2,8 @@
 
 Last checked: [date]
 
+ACX workspace: [full path]
+
 ## Ready now
 - Business details: [ready or needs update]
 - Web research: [available or not known yet]
@@ -13,4 +15,3 @@ Last checked: [date]
 
 ## Important
 No API keys, passwords, or private links are stored in this file.
-

@@ -16,7 +16,7 @@ claude plugin marketplace add riddhimaaan/acx-gtm-terminal && claude plugin inst
 /acx:onboarding
 ```
 
-This asks a few plain questions about the member's business and creates their shared ACX folder. No external tool or API key is needed to begin.
+This asks a few plain questions about the member's business and creates their shared ACX folder. If they opened Cowork in a specific folder, ACX saves there. If not, it creates `~/ACX` and tells them. No external tool or API key is needed to begin.
 
 Then run:
 

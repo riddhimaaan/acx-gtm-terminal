@@ -7,7 +7,7 @@ description: "Sets up ACX for a new member. Creates the shared business file, as
 
 ## What this does
 
-Set up the member once, in plain language. By the end, these files exist:
+Set up the member once, in plain language. By the end, these files exist in their ACX workspace:
 
 ```text
 ACX/
@@ -16,7 +16,7 @@ ACX/
   outputs/
 ```
 
-Do not create any files outside the member's working folder. Do not save API keys, passwords, or private links in any ACX file.
+Do not save API keys, passwords, or private links in any ACX file.
 
 ## How to speak
 
@@ -28,10 +28,17 @@ Do not create any files outside the member's working folder. Do not save API key
 
 ## Step 1: Check what already exists
 
-1. If `ACX/my-business.md` exists, read it.
-2. Ask one short question: `Do you want to update anything about your business?`
-3. If the answer is no, read `ACX/setup-status.md` if it exists, update only what changed, then stop.
-4. If the business file does not exist, create the `ACX` and `ACX/outputs` folders and continue.
+Choose the ACX workspace before creating or reading any file:
+
+1. If the member opened Cowork in a specific folder, use `[that folder]/ACX`.
+2. If the member did not open a folder, create and use `~/ACX`.
+3. Tell the member the exact folder in one sentence: `I will keep your ACX files in [full path].`
+4. If `my-business.md` already exists in that ACX workspace, read it.
+5. Ask one short question: `Do you want to update anything about your business?`
+6. If the answer is no, read `setup-status.md` if it exists, update only what changed, then stop.
+7. If the business file does not exist, create the ACX workspace and its `outputs` folder, then continue.
+
+For the rest of this chat, use this chosen ACX workspace for every file. When another skill says `ACX/my-business.md` or `ACX/outputs/`, it means the matching path inside this workspace.
 
 ## Step 2: Ask about the business
 
@@ -72,4 +79,3 @@ Record only `available`, `not connected`, or `not needed yet` in `ACX/setup-stat
 - Use Google Drive only when the member wants to read or save a Google Sheet or Drive file.
 - Use Apify only when normal web research cannot gather the required public data. Explain any expected cost and get a yes before running it.
 - This plugin does not send outreach, enrich contacts, verify emails, or run campaigns. Do not connect a sending, enrichment, CRM, or automation API for these skills.
-
