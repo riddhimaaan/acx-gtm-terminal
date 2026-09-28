@@ -149,7 +149,7 @@ The four levers do not operate independently. They interact in powerful ways:
 
 ### Speed + Ease = Premium Pricing
 
-When you deliver fast results (low Time Delay) with minimal effort (low Effort & Sacrifice), you can charge almost anything. This is why done-for-you agencies command 5-10x the price of courses teaching the same thing.
+When you deliver fast results (high Time Delay score) with minimal effort (high Effort & Sacrifice score), buyers see more value. A done-for-you service can feel easier to buy than a course that asks the buyer to do all the work.
 
 ### Proof + Guarantee = Unstoppable Confidence
 
