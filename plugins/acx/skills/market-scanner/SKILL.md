@@ -1,6 +1,6 @@
 ---
 name: market-scanner
-description: Checks if a market is worth selling into. Gives back 3 scores (demand, competition, open gaps) with proof and a one-line verdict. Use when someone says "scan my market", "is my market still buying", "check demand for X", "how crowded is my market", or runs Module 1 Video 2 of the ACX program.
+description: "Uses Prospeo's company search to count companies matching the member's target market. Use when someone says \"scan my market\", \"how many companies match my target\", \"is this market big enough\", or runs Module 1 Video 2 of the ACX program."
 ---
 
 <!--
@@ -11,9 +11,9 @@ See forks/CREDITS.md.
 
 # Market Scanner
 
-**The rule for everything you write:** every score needs evidence underneath it. If you cannot point at something you actually found, do not give the score.
+**The rule for everything you write:** report only the company count Prospeo actually returns. Never turn a database count into a claim that companies are ready to buy.
 
-**Who this is for:** an agency owner, consultant or service operator who is already making money. Work has stopped paying off and they want to know whether the problem is them or the market. They are not a beginner and they do not need the basics explained.
+**Who this is for:** an agency owner, consultant, or service operator who wants to know how many companies match their target before they spend time chasing that market.
 
 ## How the final answer should feel
 
@@ -22,121 +22,81 @@ Write for a busy business owner, using words a 10-year-old could understand. The
 - Put the answer first.
 - Keep the main report to one page.
 - Use one idea per sentence and short headings that ask a real question.
-- Show only the two strongest pieces of proof for each score. Keep the links beside the proof.
-- Explain every score in plain words. The number is a signpost, not the answer.
+- Show the count and the filters used.
+- Explain what the count does and does not mean in plain words.
 - End with no more than three actions the member can take next.
-- Do not use words such as "market saturation," "demand signals," or "positioning whitespace." Say "too many sellers," "people are paying," and "an open spot."
+- Do not use words such as "TAM," "market saturation," or "demand signals."
 
-## Step 0: Get the two things you need
+## Step 0: Get the company filters
 
-You need the member's **market** and **who they sell to**. Both live in `ACX/my-business.md`. Read it first. Only ask for what is genuinely missing, and write what you learn back into that file.
+Read `ACX/my-business.md` and `ACX/setup-status.md` first. You need all three facts below:
 
-## Step 1: Write the scope down in one line
+- the type of company to find
+- the country or region
+- the company size
 
-One line: what they sell, who they sell it to, which country. If you cannot write that line, you do not have enough to scan anything.
+Use the saved `## Company search filters` section when it exists. If one fact is missing, ask only for that fact and save the answer there.
 
-## Step 2: Check demand — are buyers already paying?
+Check that Prospeo company search is marked `available`. If it is not, stop and say: `Market Scanner needs the Prospeo company-search connection. Run /acx:onboarding to connect it.` Do not replace it with people search or broad web research.
 
-> Search patterns for every step below are in `references/query-recipes.md`.
+## Step 1: Prepare the search
 
-You are looking for **money already moving**, not interest. Signals that count:
+Read `references/prospeo-company-search.md`.
 
-- competitors quietly charging for this and staying in business
-- job posts that mention the problem, or a role hired to fix it
-- buyers describing the problem in their own words somewhere public
-- an existing budget line they would pull from
+Use only these company filters:
 
-Search for these things: `[problem] "struggling with"`, `[market] agencies`, `[competitor] pricing`, `[problem] costs`, `[market] trends 2026`. Use whatever search you have.
+- company type, industry, or keywords
+- company headquarters location
+- company size
 
-**Interest is not demand.** Likes, views, "this is interesting" comments — none of that is evidence anyone pays. If they only have interest, say so.
+Use Prospeo's search suggestions to select its exact industry and location values. Show the member the filters in plain language, then ask: `Prospeo may use one credit to run this company search. Should I run it?` Wait for a clear yes.
 
-## Step 3: Check crowding — how many are selling the same thing to the same people?
+## Step 2: Run one company search
 
-Signals:
+Use only Prospeo's company-search tool. Never use people search, contact search, enrichment, email lookup, or phone lookup.
 
-- a growing number of people in the same space saying the same thing
-- everyone using the same words in their marketing
-- buyers complaining that their inbox is full of this pitch
-- the same playbook that worked last year now getting silence
+Run one approved company search. Read the returned `pagination.total_count` as the count. If Prospeo does not return a reliable total, say that it did not return a reliable total. Do not estimate.
 
-Crowded is not the end. It means effort alone is no longer enough — they need an angle instead of more volume.
+## Step 3: Explain the count honestly
 
-## Step 4: Look at the open gaps (first pass)
+Say that the count is the number of companies matching the saved filters in Prospeo right now. It does **not** tell us how many are ready to buy, prove demand, or prove that the filters are perfect.
 
-Where is nobody standing? This is only a first look — the **Category Gap Finder** goes deep on it as the next step. Note what you see and move on.
+## Step 4: Choose the next move
 
-## Step 5: Check the two traps
+Offer no more than two choices:
 
-- **The empty market trap.** "Nobody is doing this" is usually a warning. Ask: is nobody doing it, or is nobody paying for it? Look for the money.
-- **The wave going out.** Demand arrives in waves — a funding cycle, a new platform, a tool that changed what buyers expect. Name what drove their last good stretch. If that wave is going out, working harder will not bring it back.
-
-## Step 6: Score the three things
-
-Score each 0–10 and say in one line what evidence earned the score.
-
-| Score | What it measures | 9–10 | 5–6 | 0–2 |
-|---|---|---|---|---|
-| **Demand** | are buyers already paying | already paying, several of them | some money moving, patchy | nobody pays for this |
-| **Competition** | how much room is left | huge gaps to attack | several players with real weaknesses | dominated, buyers happy |
-| **Open gaps** | how many spots are genuinely open | clear unmet need | a couple of soft spots | nothing left |
-
-## Step 7: Give the verdict
-
-One line: **can this market take me to the next level, yes or no — and why.** Then say which of the three it is.
-
-## How the member reads the result
-
-| Result | What it means |
-|---|---|
-| High demand, low competition | Go. Fix the work, not the market. |
-| High demand but crowded | They need an angle, not more effort. |
-| Low demand | That is the ceiling. Change the market before changing the tactics. |
+1. Narrow or widen one filter, then run a new search only after approval.
+2. Run `category-gap-finder` to look for a clearer angle inside this company group.
 
 ## What to write
 
 Save to `ACX/outputs/market-scan.md` using this exact shape:
 
 ```md
-# Is this market worth pursuing?
+# How many companies match my target?
 
 ## Short answer
-Yes / No — [one plain sentence saying why].
+Prospeo found [company count] companies matching [short description].
 
-## What we checked
+## What we searched for
+- Company type: [filter used]
+- Location: [filter used]
+- Company size: [filter used]
 
-### Are people paying? [score]/10
-[One plain sentence explaining the score.]
-- [Strong proof with link]
-- [Strong proof with link]
-
-### Is there room for us? [score]/10
-[One plain sentence explaining the score.]
-- [Strong proof with link]
-- [Strong proof with link]
-
-### Is there an open spot? [score]/10
-[One plain sentence explaining the score.]
-- [Strong proof with link]
-- [Strong proof with link]
-
-## What could go wrong?
-- [One real risk or missing fact.]
-- [One real risk or missing fact.]
+## What this means
+These are companies that match the filters in Prospeo. This is not a count of companies ready to buy.
 
 ## What to do next
-1. [Practical action.]
-2. [Practical action.]
-3. Run `category-gap-finder` to test the open spot.
+1. [Narrow or widen one filter, if needed.]
+2. Run `category-gap-finder` to find a clearer angle for these companies.
 ```
 
-The research notes may contain more detail, but do not put them in the main report. Keep the scope line in the research notes unless it makes the short answer clearer.
-
-Then stop. The next step is finding where the openings are.
+Save the result to `ACX/outputs/market-scan.md`. Keep any raw Prospeo response outside the member report.
 
 ## Things you must never do
 
-- Invent a market size, a growth rate or a competitor's revenue. If you could not find it, say it is missing.
-- Report interest as demand.
-- Call a market crowded without naming who is in it.
-- Hand over a score with no evidence under it.
-- Tell them their market is fine because they seem to want to hear it.
+- Search for people, contacts, emails, or phone numbers.
+- Run Prospeo before the member clearly approves the search.
+- Guess a filter value or a company count.
+- Call the count demand, TAM, or proof that companies will buy.
+- Hide a missing filter. Ask for it instead.

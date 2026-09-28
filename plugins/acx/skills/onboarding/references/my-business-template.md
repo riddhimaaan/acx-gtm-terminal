@@ -11,6 +11,10 @@ Last updated: [date]
 ## Where I sell
 [Countries or regions.]
 
+## Company search filters
+- Company type or industry: [What kind of company to find.]
+- Company size: [Rough employee range, or Not known yet.]
+
 ## Website and LinkedIn
 - Website: [link or Not known yet]
 - LinkedIn: [link or Not known yet]
@@ -32,7 +36,7 @@ Last updated: [date]
 - Web research: [available or not known yet]
 - Google Drive or Sheets: [available, not connected, or not needed yet]
 - Apify: [available, not connected, or not needed yet]
+- Prospeo: [available, not connected, or not needed yet]
 
 ## What we learned later
 [Agents add only durable business facts here. Keep reports in ACX/outputs.]
-

@@ -31,7 +31,7 @@ Then check for `my-business.md` in that ACX workspace.
 
 | # | Agent | Run it when | It leaves behind |
 |---|---|---|---|
-| 1 | `market-scanner` | they ask whether their market is worth selling into, whether it is still buying, or how crowded it is | three scores - demand, competition, open gaps - and a one-line verdict |
+| 1 | `market-scanner` | they want to know how many companies match their target market | a Prospeo company count and the filters used |
 | 2 | `category-gap-finder` | they want to know where competitors have left a spot open, or how to stand out | the open spots that survived testing, and one chosen play |
 | 3 | `icp-builder` | they want to pick a niche or nail down who they sell to | the niche, the ICP, the trigger events, and who to disqualify |
 | 4 | `lead-grader` | they have a list and want it checked before sending | who is ready to send, who needs review, who to skip, and why |

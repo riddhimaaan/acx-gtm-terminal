@@ -31,7 +31,7 @@ That is the router. It reads what the member asks, chooses the right skill, and 
 | Skill | Use it when |
 |---|---|
 | `start` | always - the router that runs the rest |
-| `market-scanner` | is my market still worth selling into, how crowded is it |
+| `market-scanner` | how many companies match my target market in Prospeo |
 | `category-gap-finder` | where have competitors left a spot open |
 | `icp-builder` | who should I sell to, pick my niche |
 | `lead-grader` | check this list before I send it |

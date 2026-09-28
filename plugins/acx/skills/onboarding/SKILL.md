@@ -51,20 +51,24 @@ Ask these in pairs. Use the member's own words when saving the answers.
 5. Tell me about up to three clients you enjoyed helping. What did you do for each one?
 6. Which businesses do buyers compare you with, including doing it themselves or doing nothing?
 7. What do you believe about this market that most people get wrong?
+8. What type of company do you want to work with, and roughly what size are they?
 
 Do not ask a question whose answer is already in the business file.
 
 ## Step 3: Check optional tools
 
-Read `references/tools.md`. Tell the member: `You do not need to connect anything to start. These are only useful when you need them.`
+Read `references/tools.md`. Tell the member: `You can start without connecting anything. Prospeo is needed before you run Market Scanner.`
 
 Ask which of these they already use:
 
 - Google Drive or Google Sheets
 - Apify
+- Prospeo
 - A web-research tool already available in their chat
 
 Record only `available`, `not connected`, or `not needed yet` in `ACX/setup-status.md`. Never request, receive, or store an API key during onboarding.
+
+If they want to use Market Scanner, explain: `Connect the Prospeo MCP server in your chat-app connector settings, then sign in there. ACX never asks for or saves your key.`
 
 ## Step 4: Save and finish
 
@@ -75,7 +79,8 @@ Record only `available`, `not connected`, or `not needed yet` in `ACX/setup-stat
 
 ## When another skill needs a tool
 
-- Use ordinary web research first for market, competitor, and positioning work.
+- Use Prospeo company search only for Market Scanner. It counts companies and never searches for people or contacts.
+- Use ordinary web research for competitor and positioning work.
 - Use Google Drive only when the member wants to read or save a Google Sheet or Drive file.
 - Use Apify only when normal web research cannot gather the required public data. Explain any expected cost and get a yes before running it.
 - This plugin does not send outreach, enrich contacts, verify emails, or run campaigns. Do not connect a sending, enrichment, CRM, or automation API for these skills.
