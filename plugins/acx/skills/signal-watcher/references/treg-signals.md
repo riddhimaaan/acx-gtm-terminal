@@ -31,7 +31,7 @@ For finding new companies, put every chosen category from signals 3 to 6 into on
 - **Returns:** `companyName`, `amount`, `currency`, `roundType`, `announcedDate`, `investors`, `sourceUrl`.
 - **Watch out:**
   - There is no website field.
-  - Some `companyName` values are headlines ("Ex-Tesla team") or investment funds raising their own fund. Step 9 of the skill removes them.
+  - Some `companyName` values are headlines ("Ex-Tesla team") or investment funds raising their own fund. Step 10 of the skill removes them.
   - Find the website from `sourceUrl` or a web search.
 
 ### Hiring for a role: `apify.linkedin.search.jobs`
@@ -54,7 +54,7 @@ For finding new companies, put every chosen category from signals 3 to 6 into on
   - `company_location` filters on where the company is headquartered, not where the event happened.
   - Drop events older than the last run, and events with confidence below 0.7.
   - For `hires`, keep only the seats the member chose; the job title is in `job_title` or `summary`.
-  - Leave out `company_sizes` unless you know its exact size values. Check size yourself in Step 9 instead.
+  - Leave out `company_sizes` unless you know its exact size values. Check size yourself in Step 10 instead.
 
 ### Started using a tool: `predictleads.technologies.users`
 
@@ -63,7 +63,7 @@ For finding new companies, put every chosen category from signals 3 to 6 into on
 - **Returns:** companies in `included`, newest adoption first, with `first_seen_at`.
 - **Watch out:**
   - The tool name is matched loosely. Check that the returned technology name really is the tool the member asked for. If it is not, drop every result and tell the member.
-  - There is no country or company-type filter, so most results may miss the target. Step 9 drops them, but they are still paid for.
+  - There is no country or company-type filter, so most results may miss the target. Step 10 drops them, but they are still paid for.
   - Make one call per tool.
 
 ---
@@ -103,5 +103,5 @@ Treg's `balance` tool is free. Call it at the start of every run and again at th
 
 ## Never use
 
-- People search, contact search, email or phone lookup, or person enrichment of any kind.
-- Any endpoint not listed on this page. If a better one appears in Treg's catalog, update this page first. Do not swap endpoints mid-run.
+- Any endpoint not listed on this page or in `people-and-emails.md`. If a better one appears in Treg's catalog, update the page first. Do not swap endpoints mid-run.
+- Phone number lookups, or personal (non-work) email lookups, of any kind.

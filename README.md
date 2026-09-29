@@ -34,7 +34,7 @@ That is the router. It reads what the member asks, chooses the right skill, and 
 | `market-scanner` | how many companies match my target market in Prospeo |
 | `category-gap-finder` | where have competitors left a spot open |
 | `icp-builder` | who should I sell to, pick my niche |
-| `signal-watcher` | tell me every day which target companies just raised, are hiring, or did something worth reaching out about |
+| `signal-watcher` | tell me every day which target companies just raised, hired, or did something worth reaching out about, and give me the right person with a checked email, ready for Smartlead |
 | `lead-grader` | check this list before I send it |
 | `offer-architect` | fix my offer, make it easier to understand |
 | `guarantee-designer` | make it safe to buy, risk reversal |
@@ -47,8 +47,8 @@ That is the router. It reads what the member asks, chooses the right skill, and 
 - `ACX/my-business.md` - the member's business details. Every agent reads it, and the router keeps it up to date. Asked once, never twice.
 - `ACX/setup-status.md` - which optional tools are available. No keys are stored here.
 - `ACX/outputs/` - one file per agent: `market-scan.md`, `gap-finder.md`, `icp.md`, `graded-list.csv`, `offer.md`, `guarantee.md`, `positioning.md`, `message-test.md`, `outlier-finder.md`.
-- `ACX/signals/` - Signal Watcher's setup (`watch-setup.md`) and its memory of what it already reported (`seen.csv`), so each daily run adds only what is new.
-- **Your signal sheet** - Signal Watcher's results live in a Google Sheet it creates for the member through Composio: new signals, a watch list the member can edit, and a log of what each run cost.
+- `ACX/signals/` - Signal Watcher's setup (`watch-setup.md`) and its memory of what it already reported (`seen.csv`, `leads-seen.csv`), so each daily run adds only what is new.
+- **Your signal sheet** - Signal Watcher's results live in a Google Sheet it creates for the member through Composio: new signals, an import-ready Leads tab (Smartlead field names, checked work emails, a personal line per lead), a watch list the member can edit, and a log of what each run cost.
 
 No API keys are stored in this repo.
 

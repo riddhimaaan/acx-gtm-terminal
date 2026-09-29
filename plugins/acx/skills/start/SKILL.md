@@ -34,7 +34,7 @@ Then check for `my-business.md` in that ACX workspace.
 | 1 | `market-scanner` | they want to know how many companies match their target market | a Prospeo company count and the filters used |
 | 2 | `category-gap-finder` | they want to know where competitors have left a spot open, or how to stand out | the open spots that survived testing, and one chosen play |
 | 3 | `icp-builder` | they want to pick a niche or nail down who they sell to | the niche, the ICP, the trigger events, and who to disqualify |
-| 4 | `signal-watcher` | they want to know which target companies just raised, are hiring, or did something that makes now a good time to reach out, every day | a Google Sheet that fills up daily with matching companies and their fresh signal, plus the cost of each run |
+| 4 | `signal-watcher` | they want to know which target companies just raised, are hiring, or did something that makes now a good time to reach out, every day | a Google Sheet that fills up daily with matching companies, their fresh signal, and an import-ready Leads tab (right person, checked work email, personal line), plus the cost of each run |
 | 5 | `lead-grader` | they have a list and want it checked before sending | who is ready to send, who needs review, who to skip, and why |
 | 6 | `offer-architect` | their offer is not converting or they want it rebuilt around a result | a clear offer they can explain and deliver |
 | 7 | `guarantee-designer` | buyers hesitate at the risk, or they ask how to make buying safe | three short guarantees they can honour |

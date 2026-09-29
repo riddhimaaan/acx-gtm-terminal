@@ -17,7 +17,7 @@ Tool names were checked on 2026-09-30. Before the first call of a run, fetch eac
 | Write the header rows and the Setup tab | `GOOGLESHEETS_UPDATE_VALUES_BATCH` or `GOOGLESHEETS_VALUES_UPDATE` |
 | Add new rows at the bottom | `GOOGLESHEETS_SPREADSHEETS_VALUES_APPEND` |
 | Read the Watch list, or read headers back | `GOOGLESHEETS_BATCH_GET` |
-| Make the Fit column a two-choice dropdown | `GOOGLESHEETS_SET_DATA_VALIDATION_RULE` (`validation_type` `ONE_OF_LIST`, the Signals tab's numeric id, column I = index 8, rows from index 1 down) |
+| Add a dropdown to a column | `GOOGLESHEETS_SET_DATA_VALIDATION_RULE` (`validation_type` `ONE_OF_LIST`, the tab's numeric id, zero-based column index, rows from index 1 down) |
 | Tidy column widths (optional) | `GOOGLESHEETS_AUTO_RESIZE_DIMENSIONS` |
 
 Known problems to avoid:
@@ -38,33 +38,65 @@ One row per signal. A company with two signals today gets two rows next to each 
 |---|---|---|
 | A | Date found | the date of this run, YYYY-MM-DD |
 | B | Company | company name |
-| C | Website | domain, e.g. `checkmarble.com`, or `not confirmed` |
+| C | Domain | plain domain, e.g. `checkmarble.com` (no `https://`, no `www.`), from the company lookup; `not confirmed` only if every lookup failed |
 | D | Signal | the menu name, e.g. `Raised money`, `Hiring for a role` |
 | E | What happened | one plain line, e.g. `Raised €6.5M Series A led by Smartfin` |
 | F | Signal date | when it happened, YYYY-MM-DD |
 | G | Source link | the article, job post or source URL |
 | H | Fits because | one line against the target, or what is missing |
-| I | Fit | `ICP match` or `No ICP match`. The column is a dropdown with only these two choices. |
+| I | Fit | `ICP match` or `No ICP match`. Dropdown with only these two choices (column index 8). |
 | J | Status | Signal Watcher writes `New`. The member changes it to `Contacted`, `Not a fit`, `Won` or anything they like. |
 | K | Notes | left blank for the member |
 | L | Signal ID | the Treg record id, or several ids separated by ` / ` when the same news came from more than one source; Signal Watcher uses this to avoid repeats |
 
 Signal Watcher only ever adds rows at the bottom of this tab. It never changes an existing row.
 
-## Tab 2: Watch list
+## Tab 2: Leads
+
+One row per person. This is the tab the member exports to a campaign. Columns A to F use Smartlead's own field names, so a CSV export uploads without any mapping. Every other column comes in as a custom field that can be used in templates, e.g. `{{personal_line}}`.
+
+| Column | Header | What goes in it |
+|---|---|---|
+| A | email | the work email, or blank for LinkedIn-only rows |
+| B | first_name | |
+| C | last_name | |
+| D | company_name | |
+| E | website | the company domain, same as the Signals tab |
+| F | linkedin_profile | the person's LinkedIn URL |
+| G | title | their current title |
+| H | personal_line | one sentence from the real signal, e.g. `Congrats on stepping in as Head of Sales at Reco.` |
+| I | signal | the menu name, e.g. `New leader`, `Raised money` |
+| J | signal_date | YYYY-MM-DD |
+| K | source_link | the article, job post or source URL |
+| L | lead_type | `New hire` or `Buyer` |
+| M | started_role | month and year they started, e.g. `07-2026` (new hires) |
+| N | email_status | `valid`, `risky` or `LinkedIn only`. Dropdown (column index 13). |
+| O | lead_status | Signal Watcher writes `New`, or `Needs check` when it could not be sure it has the right person. The member changes it to `Exported`, `Contacted` or `Not a fit`. Dropdown with these five choices (column index 14). |
+| P | added_on | the date of this run, YYYY-MM-DD |
+| Q | notes | left blank for the member |
+
+How the member uses it:
+
+- **Email campaign:** filter `email_status` = `valid` and `lead_status` = `New`, export as CSV, upload to Smartlead, then set those rows to `Exported`.
+- **LinkedIn campaign:** filter `email_status` = `LinkedIn only` (or `risky`), and send the `linkedin_profile` list to Aimfox or Gojiberry.
+- `Needs check` rows should be looked at by a person before any outreach.
+
+Signal Watcher only ever adds rows at the bottom of this tab. It never changes an existing row.
+
+## Tab 3: Watch list
 
 The named companies to check every day. The member can add or remove rows here directly, and each run reads this tab fresh.
 
 | Column | Header | What goes in it |
 |---|---|---|
-| A | Website | domain, e.g. `reco.ai` |
+| A | Domain | plain domain, e.g. `reco.ai` |
 | B | Company | name, if known |
 | C | Added on | YYYY-MM-DD |
 | D | Notes | anything the member wants |
 
 Each company on this list costs money every day (see `treg-signals.md`). The daily cost check in Step 7 counts the rows on this tab.
 
-## Tab 3: Run log
+## Tab 4: Run log
 
 One row per run, so the member can see what each day cost.
 
@@ -79,8 +111,11 @@ One row per run, so the member can see what each day cost.
 | G | Skipped: not a fit |
 | H | Skipped: already seen |
 | I | Checks that did not run |
+| J | Leads added |
+| K | Leads with a valid email |
+| L | ICP-match companies with no lead found |
 
-## Tab 4: Setup
+## Tab 5: Setup
 
 Two columns, `Setting` and `Value`, written once at setup and rewritten when the member changes something. It is there so the member can see their choices. Changes are made by telling Claude, not by editing this tab.
 
@@ -92,6 +127,8 @@ Rows, in order:
 - Size
 - Do not show
 - Signals watched (one line per signal, with job titles, seats or tools)
+- Buyer titles
+- New hires: how recent, and which seats
 - Daily spend limit
 - Schedule
 - Set up on
