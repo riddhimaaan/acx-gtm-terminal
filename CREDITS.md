@@ -1,10 +1,10 @@
 # CREDITS
 
 This folder is the product: the single-plugin marketplace members install. `plugins/acx/`
-holds all nine skills under one plugin, so the whole terminal installs in one command.
+holds every skill under one plugin, so the whole terminal installs in one command.
 
-Eight of the nine are **forks of public agent skills**. `skills/start/` is ours — the
-router that runs the other eight in order and carries context between them, because under
+Eight of the nine are **forks of public agent skills**. `skills/start/` and `skills/signal-watcher/` are ours. `start` is the
+router that runs the others in order and carries context between them, because under
 this design the individual skills do not read each other.
 
 The ACX-authored versions of these agents live in `../plugins/` and are **not shipped**.

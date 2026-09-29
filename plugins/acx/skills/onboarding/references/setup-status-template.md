@@ -13,6 +13,8 @@ ACX workspace: [full path]
 ## Optional tools
 - Google Drive or Sheets: [available, not connected, or not needed yet]
 - Apify: [available, not connected, or not needed yet]
+- Treg (for Signal Watcher): [available, not connected, or not needed yet]
+- Google Sheets through Composio (for Signal Watcher): [available, not connected, or not needed yet]
 
 ## Important
 No API keys, passwords, or private links are stored in this file.

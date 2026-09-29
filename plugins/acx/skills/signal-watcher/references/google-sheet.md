@@ -1,0 +1,95 @@
+# The Signal Watcher Google Sheet
+
+The sheet is written through Composio's Google Sheets tools. Composio signs in to Google on the member's behalf. ACX never sees or stores a Google password or key.
+
+## Composio tools to use
+
+Tool names were checked on 2026-09-30. Before the first call of a run, fetch each tool's input fields with Composio's `COMPOSIO_GET_TOOL_SCHEMAS`, because field names differ between tools. For example, some tools take `spreadsheetId` and others take `spreadsheet_id`.
+
+| Job | Composio tool |
+|---|---|
+| Create the spreadsheet | `GOOGLESHEETS_CREATE_GOOGLE_SHEET1` |
+| Add a tab | `GOOGLESHEETS_ADD_SHEET` |
+| Rename the first tab to "Signals" | `GOOGLESHEETS_UPDATE_SHEET_PROPERTIES` |
+| Freeze the header row | `GOOGLESHEETS_UPDATE_SHEET_PROPERTIES` |
+| Make the header bold | `GOOGLESHEETS_FORMAT_CELL` |
+| Get tab names and numeric tab ids | `GOOGLESHEETS_GET_SPREADSHEET_INFO` |
+| Write the header rows and the Setup tab | `GOOGLESHEETS_UPDATE_VALUES_BATCH` or `GOOGLESHEETS_VALUES_UPDATE` |
+| Add new rows at the bottom | `GOOGLESHEETS_SPREADSHEETS_VALUES_APPEND` |
+| Read the Watch list, or read headers back | `GOOGLESHEETS_BATCH_GET` |
+| Tidy column widths (optional) | `GOOGLESHEETS_AUTO_RESIZE_DIMENSIONS` |
+
+Known problems to avoid:
+
+- **Creating the spreadsheet cannot be undone by running it again.** Running the create call twice makes two sheets. Create it once, then save the ID in `watch-setup.md` straight away. If the create call times out, check Google Drive for the sheet before trying again.
+- **Tab names must match exactly** inside a range, e.g. `'Run log'!A1`. Put names that contain a space in single quotes.
+- **Values must be a list of rows.** Every row in one call must have the same number of cells. Use an empty string for a blank cell, never a missing value.
+- **Append rows one call at a time.** Do not run several appends at once.
+- **Formatting and freezing need the numeric tab id,** not the tab name. Get it from `GOOGLESHEETS_GET_SPREADSHEET_INFO`.
+
+## Tab 1: Signals
+
+One row per signal. A company with two signals today gets two rows next to each other.
+
+| Column | Header | What goes in it |
+|---|---|---|
+| A | Date found | the date of this run, YYYY-MM-DD |
+| B | Company | company name |
+| C | Website | domain, e.g. `checkmarble.com`, or `not confirmed` |
+| D | Signal | the menu name, e.g. `Raised money`, `Hiring for a role` |
+| E | What happened | one plain line, e.g. `Raised €6.5M Series A led by Smartfin` |
+| F | Signal date | when it happened, YYYY-MM-DD |
+| G | Source link | the article, job post or source URL |
+| H | Fits because | one line against the target, or what is missing |
+| I | Fit | `Match` or `Check fit` |
+| J | Status | Signal Watcher writes `New`. The member changes it to `Contacted`, `Not a fit`, `Won` or anything they like. |
+| K | Notes | left blank for the member |
+| L | Signal ID | the Treg record id; Signal Watcher uses this to avoid repeats |
+
+Signal Watcher only ever adds rows at the bottom of this tab. It never changes an existing row.
+
+## Tab 2: Watch list
+
+The named companies to check every day. The member can add or remove rows here directly, and each run reads this tab fresh.
+
+| Column | Header | What goes in it |
+|---|---|---|
+| A | Website | domain, e.g. `reco.ai` |
+| B | Company | name, if known |
+| C | Added on | YYYY-MM-DD |
+| D | Notes | anything the member wants |
+
+Each company on this list costs money every day (see `treg-signals.md`). The daily cost check in Step 7 counts the rows on this tab.
+
+## Tab 3: Run log
+
+One row per run, so the member can see what each day cost.
+
+| Column | Header |
+|---|---|
+| A | Run date |
+| B | Estimated cost ($) |
+| C | Actually spent ($) |
+| D | Treg balance before ($) |
+| E | Treg balance after ($) |
+| F | New signals added |
+| G | Skipped: not a fit |
+| H | Skipped: already seen |
+| I | Checks that did not run |
+
+## Tab 4: Setup
+
+Two columns, `Setting` and `Value`, written once at setup and rewritten when the member changes something. It is there so the member can see their choices. Changes are made by telling Claude, not by editing this tab.
+
+Rows, in order:
+
+- Company type
+- Where
+- Skip these locations
+- Size
+- Do not show
+- Signals watched (one line per signal, with job titles, seats or tools)
+- Daily spend limit
+- Schedule
+- Set up on
+- How to change this: `Tell Claude "change my signals" or "change my targets".`

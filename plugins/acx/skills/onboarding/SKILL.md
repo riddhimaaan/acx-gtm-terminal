@@ -64,11 +64,14 @@ Ask which of these they already use:
 - Google Drive or Google Sheets
 - Apify
 - Prospeo
+- Treg
 - A web-research tool already available in their chat
 
 Record only `available`, `not connected`, or `not needed yet` in `ACX/setup-status.md`. Never request, receive, or store an API key during onboarding.
 
 If they want to use Market Scanner, explain: `Connect the Prospeo MCP server in your chat-app connector settings, then sign in there. ACX never asks for or saves your key.`
+
+If they want to use Signal Watcher, explain: `Connect the Treg MCP server in your chat-app connector settings, then sign in there. Treg charges a small amount per check from your Treg balance. Signal Watcher also saves results to a Google Sheet, so connect the Composio MCP server and connect Google Sheets inside it. ACX never asks for or saves your keys.`
 
 ## Step 4: Save and finish
 
@@ -81,6 +84,7 @@ If they want to use Market Scanner, explain: `Connect the Prospeo MCP server in 
 
 - Use Prospeo company search only for Market Scanner. It counts companies and never searches for people or contacts.
 - Use ordinary web research for competitor and positioning work.
-- Use Google Drive only when the member wants to read or save a Google Sheet or Drive file.
+- Use Google Drive only when the member wants to read or save a Google Sheet or Drive file, or when Signal Watcher saves its results to the member's signal sheet through Composio.
 - Use Apify only when normal web research cannot gather the required public data. Explain any expected cost and get a yes before running it.
-- This plugin does not send outreach, enrich contacts, verify emails, or run campaigns. Do not connect a sending, enrichment, CRM, or automation API for these skills.
+- Use Treg only for Signal Watcher. It checks companies for buying signals and never searches for people or contacts.
+- This plugin does not send outreach, enrich contacts, verify emails, or run campaigns. Do not connect a sending, contact-enrichment, CRM, or automation API for these skills.
