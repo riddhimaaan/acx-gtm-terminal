@@ -64,14 +64,13 @@ Ask which of these they already use:
 - Google Drive or Google Sheets
 - Apify
 - Prospeo
-- Treg
 - A web-research tool already available in their chat
 
 Record only `available`, `not connected`, or `not needed yet` in `ACX/setup-status.md`. Never request, receive, or store an API key during onboarding.
 
 If they want to use Market Scanner, explain: `Connect the Prospeo MCP server in your chat-app connector settings, then sign in there. ACX never asks for or saves your key.`
 
-If they want to use Signal Watcher, explain: `Connect the Treg MCP server in your chat-app connector settings, then sign in there. Treg charges a small amount per check from your Treg balance. Signal Watcher also saves results to a Google Sheet, so connect the Composio MCP server and connect Google Sheets inside it. To find people and check emails it uses your own Prospeo, Icypeas and MillionVerifier accounts when they are connected, and Treg otherwise. ACX never asks for or saves your keys.`
+Do not ask about Signal Watcher here. It has its own questionnaire and checks its own connections when the member first runs it.
 
 ## Step 4: Save and finish
 
@@ -86,5 +85,5 @@ If they want to use Signal Watcher, explain: `Connect the Treg MCP server in you
 - Use ordinary web research for competitor and positioning work.
 - Use Google Drive only when the member wants to read or save a Google Sheet or Drive file, or when Signal Watcher saves its results to the member's signal sheet through Composio.
 - Use Apify only when normal web research cannot gather the required public data. Explain any expected cost and get a yes before running it.
-- Use Treg, Icypeas and MillionVerifier only for Signal Watcher. It finds companies with a buying signal and, at companies that match the member's ICP, the right person with a checked work email. It never looks up phone numbers or personal emails.
+- Use Treg, Icypeas and MillionVerifier only for Signal Watcher. It finds companies with a buying signal and, at companies that match the targets set in its own questionnaire, the right person with a checked work email. It never looks up phone numbers or personal emails.
 - Signal Watcher is the only skill that looks up people or checks emails. No skill in this plugin sends outreach or runs campaigns. Do not connect a sending, CRM or automation tool for these skills.

@@ -119,17 +119,24 @@ One row per run, so the member can see what each day cost.
 
 Two columns, `Setting` and `Value`, written once at setup and rewritten when the member changes something. It is there so the member can see their choices. Changes are made by telling Claude, not by editing this tab.
 
-Rows, in order:
+Rows, in order. Each value is the member's own answer from Signal Watcher's questionnaire:
 
 - Company type
 - Where
-- Skip these locations
+- Leave out these places
 - Size
-- Do not show
-- Signals watched (one line per signal, with job titles, seats or tools)
-- Buyer titles
-- New hires: how recent, and which seats
+- Must also be true
+- Never show
+- Signals watched (one line per signal, with its details and whether it covers the whole market, named companies, or both)
+- People to contact, per signal
+- Titles, and titles kept out
+- At most per company
+- Based in
+- Emails in the sheet
+- Keep people with no email for LinkedIn
+- Personal line
+- At most new leads a day
 - Daily spend limit
 - Schedule
 - Set up on
-- How to change this: `Tell Claude "change my signals" or "change my targets".`
+- How to change this: `Run /acx:signal-watcher and say "change something".`

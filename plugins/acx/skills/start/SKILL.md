@@ -64,7 +64,7 @@ Each agent writes one file into `ACX/outputs/`:
 
 Read the files you already have before starting a new agent. That is how context carries forward.
 
-`signal-watcher` is the one agent that runs again every day. Its setup and memory live in `ACX/signals/`, and its results go to a Google Sheet (the link is in `ACX/signals/watch-setup.md`). Read that sheet when a later agent, such as `lead-grader`, needs the signal list. When the member says "run my signals" and that folder exists, run it straight away without asking setup questions.
+`signal-watcher` is the one agent that runs again every day. Its setup and memory live in `ACX/signals/`, and its results go to a Google Sheet (the link is in `ACX/signals/watch-setup.md`). Read that sheet when a later agent, such as `lead-grader`, needs the signal list. Hand every signal request straight to `signal-watcher`. It has its own questionnaire, separate from onboarding and the ICP, and asks every question itself. Do not answer its questions for the member from other ACX files.
 
 ## Rules you hold, whatever the member says
 

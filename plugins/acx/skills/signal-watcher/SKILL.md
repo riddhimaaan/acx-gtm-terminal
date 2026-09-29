@@ -20,18 +20,30 @@ Write for a busy business owner, using words a 10-year-old could understand.
 - Show the cost at the start and at the end of every run.
 - Do not use words such as "intent data," "trigger events," or "firmographics." Say "signal," "what happened," and "company type."
 
-## Two modes
+## Three ways this skill starts
 
 Check for `ACX/signals/watch-setup.md`.
 
-- **It does not exist:** run **Setup** (Steps 0 to 6), then the first **Daily run**.
-- **It exists:** skip straight to the **Daily run** (Steps 7 to 12). Do not ask the setup questions again. If the member says "change my signals" or "change my targets", run only the setup step that changes, then update `watch-setup.md` and the sheet's Setup tab.
+- **It does not exist:** run the full **Setup** (Steps 0 to 6), then the first **Daily run** (Steps 7 to 12).
+- **It exists and this is the scheduled daily run** (the request says `scheduled daily run`): go straight to the **Daily run**. Ask nothing.
+- **It exists and the member started it themselves:** show a short summary of their saved setup and ask: `Run now with this setup, or change something first?` If they want a change, ask again every question in the part they want to change (Steps 1 to 4), read the whole setup back (Step 5), then save.
 
 ---
 
 ## Setup
 
-### Step 0: Check both connections
+### How to ask: the questionnaire rules
+
+This questionnaire belongs to Signal Watcher alone. It is separate from ACX onboarding.
+
+- **Ask every question below.** Never skip one because another ACX file, the ICP or an earlier chat seems to answer it. Do not pre-fill answers from `my-business.md`, `icp.md` or any other skill's output.
+- **Never assume.** Never fill a blank with a default, a suggestion or a "most people choose". If the member says "not sure", offer 2 or 3 concrete choices and let them pick. "Any" is a valid answer only when the member says it.
+- **Make vague answers checkable.** "Tech companies" or "bigger ones" cannot be searched. Ask one follow-up until the answer is something a lookup can check, such as "B2B software" or "50 to 500 employees".
+- **Two or three questions at a time.** Number them, wait for the answers, then move on.
+- **Only this skill's files.** Save the answers in `ACX/signals/watch-setup.md` and the sheet's Setup tab. Never write them into `my-business.md` or `icp.md`.
+- **Nothing is built or spent until the member confirms the full read-back** in Step 5.
+
+### Step 0: Check the connections
 
 Signal Watcher needs two connections:
 
@@ -40,7 +52,6 @@ Signal Watcher needs two connections:
 2. **Composio with Google Sheets** holds the results. Read `references/google-sheet.md`. If the Composio tools are not in this chat, stop and say:
    `Signal Watcher saves your signals to a Google Sheet through Composio. Connect the Composio MCP server in your chat-app connector settings, then connect Google Sheets inside Composio.`
    If Composio is there but Google Sheets is not connected, use Composio's connection tool to start the Google Sheets sign-in. Show the member the sign-in link and wait until they say it is done.
-   If more than one Google Sheets account is connected, list their email addresses and ask: `Which Google account should your signal sheet live in?` Save the chosen account's email and Composio account id in `watch-setup.md` (Step 6), and pass that account on every Google Sheets call from then on.
 
 When both work, mark `Treg` and `Google Sheets (Composio)` as `available` in `ACX/setup-status.md`.
 
@@ -50,103 +61,97 @@ Then check the member's own lead tools, which Signal Watcher uses to look up com
 2. The member's own key registered in Treg (it shows in Treg's `my_tools`). These calls use the member's own credits and Treg does not charge for them.
 3. Treg's catalog, which works without the member's account but is paid from the Treg balance.
 
-Save the route for each tool in `watch-setup.md` (Step 6), and tell the member in one line which ones will spend Treg balance.
+Tell the member in one line which ones will spend Treg balance.
 
 Read `references/treg-signals.md` before choosing any Treg endpoint. Use only the endpoints it lists.
 
-### Step 1: Input one: which companies to watch
+### Step 1: Part A: the companies
 
-Read `ACX/outputs/icp.md` and `ACX/my-business.md` first.
+1. **What kind of companies do you want to find?** Describe them the way you would to a friend. (Follow up until it is checkable: an industry or company type, such as "B2B software" or "logistics companies".)
+2. **Which countries or regions should they be in?** And are there any places to leave out?
+3. **How big should they be?** Give a range of employees, such as "20 to 200".
+4. **Is there anything else that must be true about them?** For example "only venture-backed", "no agencies", "must sell to other businesses". The member may answer "nothing else".
+5. **Which companies or types should never show up?** For example existing clients, competitors, partners. They can paste names, websites or a file, or say "none".
+6. **Do you want me to keep an eye on specific companies by name?** Paste their websites or give me a file, or say "no". Tell them in one line: `Each named company is checked every day and costs money for each check. You can add or remove names later in the sheet's Watch list tab.`
 
-If `icp.md` exists, pull these out and show them back in plain words:
+### Step 2: Part B: the signals
 
-- **Company type:** the strong-fit categories, plus adjacent fit if the member wants it
-- **Where:** the priority locations and the locations to skip
-- **Size:** the company-size rule
-- **Skip:** the "Do not contact" list
+7. **Which signals should I watch?** Show this menu and let them pick as many as they like:
 
-Ask: `I will look for companies like this. Is that right, or should I change anything?`
+| # | Signal | Plain meaning |
+|---|---|---|
+| 1 | Raised money | announced a funding round |
+| 2 | Hiring for a role | posted a job you care about |
+| 3 | New leader | hired a new senior person, who Signal Watcher can find for you |
+| 4 | Launched something | released a product or feature |
+| 5 | Growing into new places | opened a new office or location |
+| 6 | New partner | announced a partnership |
+| 7 | Started using a tool | a new tool showed up on their website |
 
-If `icp.md` does not exist, ask only what is missing, two questions at a time:
+If they ask for a signal that is not on the menu, say Signal Watcher cannot watch it yet. Do not invent a way to fake it.
 
-1. What kind of companies do you want to find? Say it the way you would describe them to a friend.
-2. Which countries or regions, and roughly what size (number of employees)?
-3. Which companies should never show up, such as existing clients, competitors, or a type you avoid?
+8. **Ask the details for each signal they picked, and nothing for the others:**
+   - **Raised money:** Which rounds count (pre-seed, seed, Series A, Series B, Series C or later, or any)? Is there a smallest amount that counts?
+   - **Hiring for a role:** Which job titles? Where must the job be based?
+   - **New leader:** Which roles count as a new leader, e.g. "Head of Sales", "VP Marketing"? How recently must they have started, in days?
+   - **Launched something:** Any launch, or only certain kinds? If certain kinds, which?
+   - **Growing into new places:** Any new office, or only in certain countries? If certain countries, which?
+   - **New partner:** Any partnership, or only with certain companies or types of company?
+   - **Started using a tool:** Which tools, exactly? Warn in one line: `Searching the whole market for a tool is the priciest and noisiest signal. It costs the same whether anything comes back, it cannot filter by country or company type, and a loose tool name can match the wrong tool.`
+9. **If they named companies in question 6:** For each signal, should I search the whole market, only your named companies, or both?
 
-Then offer the optional list: `Do you also have specific companies you want me to keep an eye on? Paste their websites or give me a CSV. You can skip this, and you can add more later in the sheet.`
+### Step 3: Part C: the people to contact
 
-Tell the member the difference in one line: **finding new companies** searches the whole market for signals, while **watching named companies** checks only the companies on their list. Watching named companies costs money for each company every day, so keep the list under 50 unless they approve more.
+10. **For each signal, who should I find at the company?** For each one they picked, the choices are: the new hire (New leader only), people with certain job titles, or nobody (company only). Ask whether it is the same for every signal, or different per signal.
+11. **Which exact job titles?** Collect every title they want, including the variants they accept, e.g. "Head of Sales, VP Sales, Sales Director, CRO". Ask which titles to keep out, e.g. "no assistants, no interns, no SDRs".
+12. **At most how many people per company?** 1, 2 or 3.
+13. **Where must the person be based?** The same countries as the companies, anywhere, or somewhere specific.
+14. **Which emails do you want in the sheet?** Only emails that passed the check (`valid`), or also catch-all emails that cannot be fully checked (`risky`)? And should people with no email be kept for LinkedIn outreach?
+15. **Do you want a personal opening line for each lead?** If yes: which language, and are there words or phrases to avoid?
 
-Then settle **who to reach** at each matching company:
+### Step 4: Part D: budget, schedule and sheet
 
-- **Buyer titles:** read `Buyer` from the ICP's `## Other rules`. Show it back with the usual variants, e.g. `Head of Marketing, VP Marketing, Marketing Director, CMO`, and ask the member to add or remove titles. These are the people found for every signal except "New leader".
-- **New hires:** for the "New leader" signal, the person to reach is the one who was just hired. Ask how recent counts: `How recently must they have started? I suggest 90 days.`
-
-If the member gives a durable new fact about their market, add it to `my-business.md` under `## What we learned later`.
-
-### Step 2: Input two: which signals to watch
-
-Show this menu. Pre-select every signal that matches a line in the ICP's `## Buy now when` section, and say which ICP line it came from.
-
-| # | Signal | Plain meaning | Needs from the member |
-|---|---|---|---|
-| 1 | Raised money | announced a funding round | nothing |
-| 2 | Hiring for a role | posted a job you care about | the job titles, e.g. "SDR", "Head of Marketing" |
-| 3 | New leader | hired a new senior person, and Signal Watcher finds that person | which seats matter, e.g. "Head of Sales", "Head of Marketing" |
-| 4 | Launched something | released a product or feature | nothing |
-| 5 | Growing into new places | opened a new office or location | nothing |
-| 6 | New partner | announced a partnership | nothing |
-| 7 | Started using a tool | a new tool showed up on their site | the tools, e.g. "HubSpot", "Salesforce" |
-
-Ask: `Which of these should I watch? Pick as many as you like.` Then ask for anything in the last column.
-
-For signal 7 across the whole market, warn the member in one line: it is the priciest and noisiest signal. It costs the same whether results come back or not, it cannot filter by country or company type, and a loose tool name can match the wrong tool.
-
-If the member wants a signal that is not on the menu, say that Signal Watcher cannot watch it yet, and do not invent a way to fake it.
-
-### Step 3: Show the daily cost and set a limit
-
-Work out the daily cost from the prices in `references/treg-signals.md` and `references/people-and-emails.md`, the chosen signals, the number of named companies, and the result caps. Add the lead-finding cost: about 5 matching companies a day unless the member expects more, each with one company lookup and up to 2 people. Check the live balance with Treg's `balance` tool. Google Sheets through Composio adds no cost. Show costs paid from the member's own Prospeo, Icypeas or MillionVerifier credits on a separate line, since they do not come out of Treg.
-
-Show it like this:
+16. **At most how many new leads a day?** This caps the daily cost of finding people.
+17. **Show the cost, then ask for a daily limit.** Work the estimate out from the prices in `references/treg-signals.md` and `references/people-and-emails.md`, using only the member's answers: the chosen signals, the named companies, the people per company and the leads-per-day cap. Check the live balance with Treg's `balance` tool. Show costs paid from the member's own Prospeo, Icypeas or MillionVerifier credits on their own line. Show it like this:
 
 ```text
 What this will cost each day
 - Finding new companies that raised money: free (up to 5 checks a day)
 - Finding new companies hiring "SDR" in 2 countries: about $0.03
 - Watching 20 named companies for news: 20 × $0.04 = $0.80
-- Finding people and emails for about 5 matching companies: about $0.25
+- Finding people and emails for up to 10 leads: about $0.25
 Total from Treg: about $1.08 a day, about $32 a month.
-From your own accounts instead: [only if routed there, e.g. "Icypeas and MillionVerifier credits for about 10 people a day"]
+From your own accounts instead: [only if routed there, e.g. "Icypeas and MillionVerifier credits for up to 10 people a day"]
 Your Treg balance right now: $12.40, which covers about 15 days.
 ```
 
-Then ask: `Should I set a daily spend limit of $[total rounded up]? I will never spend more than that in one day without asking you.` Wait for a clear yes. If the balance covers fewer than 7 days, say so plainly.
+   Then ask: `What daily spend limit should I use? I will never spend more than that in one day without asking you.` Use the number they give. If the balance covers fewer than 7 days, say so plainly.
+18. **When should it run?** Every day, or only on certain days? At what time, and in which time zone? Or only when you ask?
+19. **Which Google account should the sheet live in?** Ask only if more than one Google Sheets account is connected in Composio. List their email addresses.
+20. **What should the sheet be called?**
 
-### Step 4: Offer the daily schedule
+### Step 5: Part E: read it all back, then build
 
-If a scheduling tool is available in this chat, offer: `Do you want me to run this every morning at [time]?` Create the scheduled task only after a clear yes. The task runs `/acx:signal-watcher`.
+Show every answer from questions 1 to 20 in one short, plain summary, grouped as Companies, Signals, People, Leads and Budget. Ask: `Is all of this right? Tell me anything to change.` Change what they say, and show the summary again until they say it is right.
 
-If no scheduling tool is available, tell the member to run `/acx:signal-watcher` each day, or set up a scheduled task in their chat app.
+Only then:
 
-### Step 5: Create the Google Sheet
+1. **Schedule.** If they asked for a schedule and a scheduling tool is available, create it now. The task's request must be `/acx:signal-watcher scheduled daily run`. If no scheduling tool is available, tell them to run `/acx:signal-watcher` themselves, or set a scheduled task up in their chat app.
+2. **Create the Google Sheet.** Follow `references/google-sheet.md` for the tool names, the tab layout and the column order.
+   1. If `watch-setup.md` already has a sheet link, use that sheet. Never create a second one.
+   2. Create one spreadsheet with the name from question 20, in the account from question 19.
+   3. Rename the first tab to **Signals**, then add **Leads**, **Watch list**, **Run log** and **Setup** one at a time, in that order. Adding tabs at the same time puts them in a random order.
+   4. Write the header row on each tab, make it bold, and freeze it.
+   5. Add the dropdowns listed in `references/google-sheet.md`.
+   6. Fill the **Watch list** tab with the companies from question 6.
+   7. Fill the **Setup** tab with the confirmed answers.
+   8. Read the headers back once to check they landed in the right place.
 
-Only now, after every answer is in, build the sheet. Follow `references/google-sheet.md` for the tool names, the tab layout and the column order.
-
-1. If `watch-setup.md` already has a sheet link, use that sheet. Never create a second one.
-2. Create one spreadsheet named `ACX Signals: [business name from my-business.md]`.
-3. Rename the first tab to **Signals**, then add **Leads**, **Watch list**, **Run log** and **Setup** one at a time, in that order. Adding tabs at the same time puts them in a random order.
-4. Write the header row on each tab, make it bold, and freeze it.
-5. Make the Signals tab's Fit column a dropdown with only two choices: `ICP match` and `No ICP match`. Add the dropdowns on the Leads tab listed in `references/google-sheet.md`.
-6. Fill the **Watch list** tab with any named companies from Step 1.
-7. Fill the **Setup** tab with the answers from Steps 1 to 4.
-8. Read the headers back once to check they landed in the right place.
-
-Give the member the link: `Your signal sheet is ready: [link]. Companies with a new signal show up in the Signals tab, and the people to contact, with checked emails, in the Leads tab. You can add companies to the Watch list tab any time.`
+Give the member the link: `Your signal sheet is ready: [link]. Companies with a new signal show up in the Signals tab, and the people to contact in the Leads tab. You can add companies to the Watch list tab any time.`
 
 ### Step 6: Save the setup
 
-Create `ACX/signals/watch-setup.md` using this exact shape:
+Create `ACX/signals/watch-setup.md` using this exact shape. Every line comes from an answer the member gave. Nothing is filled in by guess.
 
 ```md
 # Signal watch setup
@@ -155,43 +160,52 @@ Last changed: [date]
 Last run: never
 
 ## Google Sheet
+- Name: [answer 20]
 - Link: [spreadsheet link]
 - Spreadsheet ID: [id]
 - Google account: [email] (Composio account: [account id])
 
-## Companies to watch
-- Company type: [from Step 1]
-- Where: [locations]
-- Skip these locations: [or none]
-- Size: [employee range, or Not known yet]
-- Do not show: [list]
+## Companies
+- Company type: [answer 1]
+- Where: [answer 2]
+- Leave out these places: [answer 2, or none]
+- Size: [answer 3]
+- Must also be true: [answer 4, or nothing else]
+- Never show: [answer 5, or none]
+- Named companies: kept in the sheet's Watch list tab
 
-## Named companies
-Kept in the sheet's Watch list tab.
+## Signals
+- [Signal name]: [its details from answer 8] | [whole market, named companies, or both]
 
-## Who to reach
-- Buyer titles: [list]
-- New hires: started within the last [90] days, in these seats: [list]
+## People to contact
+- Per signal: [signal] → [the new hire / these titles / nobody]
+- Titles: [answer 11]
+- Keep out: [answer 11, or none]
+- At most per company: [answer 12]
+- Based in: [answer 13]
+
+## Leads
+- Emails in the sheet: [valid only, or valid and risky]
+- Keep people with no email for LinkedIn: [yes or no]
+- Personal line: [no, or yes: language, words to avoid]
+- At most new leads a day: [answer 16]
 
 ## Lead tools
 - Prospeo: [own connection, own key in Treg, or Treg catalog]
 - Icypeas: [own connection, own key in Treg, or Treg catalog]
 - MillionVerifier: [own connection, own key in Treg, or Treg catalog]
 
-## Signals
-- [Signal name]: [details such as job titles or seats] | [finding new, watching named, or both]
-
 ## Daily spend limit
-$[amount] a day, approved on [date]
+$[answer 17] a day, approved on [date]
 
 ## Schedule
-[Every day at 08:00, or: run by hand]
+[answer 18, with time zone, or: run by hand]
 ```
 
 Also create `ACX/signals/seen.csv` with only this header:
 
 ```csv
-first_seen,signal_id,company,website,signal
+first_seen,signal_id,company,domain,signal
 ```
 
 And create `ACX/signals/leads-seen.csv` with only this header:
@@ -238,31 +252,34 @@ Run only the calls the setup needs. Follow `references/treg-signals.md` for whic
 For every result:
 
 1. **Is it a real company?** Drop headlines, investment funds raising their own fund, and rows with no clear company name. Count them as "not a company".
-2. **Drop the obvious misses for free.** If the source already shows a clear miss (wrong country, clearly the wrong industry, on the "Do not show" list), drop it now, before paying for any lookup.
-3. **Look the company up.** Every company left needs a domain, a headcount and an industry. If the source already gave all three (LinkedIn job results do), use them. Otherwise run one company lookup with Prospeo, following `references/people-and-emails.md`. If Prospeo does not know the company, try the source article or a quick web search for the domain. Store the domain in plain form, e.g. `checkmarble.com`, never `https://www.checkmarble.com/`.
-4. **Does it match the target?** Check it against company type, location, size and the "Do not show" list in the setup. Judge only from the lookup, the source, or the company's own site.
+2. **Drop the obvious misses for free.** If the source already shows a clear miss (a place left out, clearly the wrong industry, on the "Never show" list), drop it now, before paying for any lookup.
+3. **Does the signal match the member's details?** Check it against that signal's details in the setup, e.g. the rounds and smallest amount for "Raised money", the roles and how recently they started for "New leader", the countries for "Growing into new places". A signal outside those details is dropped and counted.
+4. **Look the company up.** Every company left needs a domain, a headcount and an industry. If the source already gave all three (LinkedIn job results do), use them. Otherwise run one company lookup with Prospeo, following `references/people-and-emails.md`. If Prospeo does not know the company, try the source article or a quick web search for the domain. Store the domain in plain form, e.g. `checkmarble.com`, never `https://www.checkmarble.com/`.
+5. **Does it match the target?** Check it against every line under `## Companies` in the setup: company type, where, places left out, size, what must also be true, and the "Never show" list. Judge only from the lookup, the source, or the company's own site.
    - Clear match on every rule: keep it, with Fit `ICP match`.
-   - Clear miss (wrong industry, wrong country, wrong size, on the "Do not show" list): drop it and count the reason.
+   - Clear miss on any line: drop it and count the reason.
    - A real company in the right space, but a rule still cannot be confirmed after the lookup: keep it with Fit `No ICP match`, and say in "Fits because" what could not be confirmed. Never guess an industry or size to turn it into a match.
-5. **Is it the same news twice?** The same event often arrives from two sources, or from both a market-wide check and the Watch list (for example, one funding round reported by two news sites). When the company, the signal and the date match within a few days, keep one row. Use the most detailed source, and put every record id in Signal ID, separated by ` / `.
-6. **Is it new?** Drop any result whose id is already in `seen.csv`. A known company with a new signal still counts as new.
-7. **Drop weak news.** Drop news events with a confidence below 0.7.
+6. **Is it the same news twice?** The same event often arrives from two sources, or from both a market-wide check and the Watch list (for example, one funding round reported by two news sites). When the company, the signal and the date match within a few days, keep one row. Use the most detailed source, and put every record id in Signal ID, separated by ` / `.
+7. **Is it new?** Drop any result whose id is already in `seen.csv`. A known company with a new signal still counts as new.
+8. **Drop weak news.** Drop news events with a confidence below 0.7.
 
 ### Step 11: Find the people and their emails
 
-Only for companies marked `ICP match`. Never spend on people at a `No ICP match` company. Follow `references/people-and-emails.md` for every call.
+Only for companies marked `ICP match`. Never spend on people at a `No ICP match` company. Follow `references/people-and-emails.md` for every call, and the member's answers under `## People to contact` and `## Leads` in the setup for every choice. Never swap in a default.
 
-1. **Pick who to find.**
-   - "New leader" signal: the person who was just hired.
-   - Every other signal: people whose current title matches the buyer titles. Up to 2 per company, most senior first.
+1. **Pick who to find**, using the per-signal choice in the setup:
+   - **The new hire** (New leader only): the person who was just hired.
+   - **These titles:** people whose current title is one of the member's titles and none of the "keep out" titles. Most senior first, up to the member's "at most per company".
+   - **Nobody:** find no one. The company stays in the Signals tab only.
 2. **Find them.**
    - If the news names the new hire, search for that name at the company's domain.
-   - If it does not, search the company's domain for the chosen seat's titles.
-   - For buyers, search the company's domain for the buyer titles.
+   - If it does not, search the company's domain for the new-leader roles the member chose.
+   - For titles, search the company's domain for the member's titles.
 3. **Check each person before keeping them.**
    - Their current company must be this company (same domain or same LinkedIn company page).
-   - Their current title must match what the member asked for.
-   - For a new hire, their start date in this role must fall inside the member's window (for example, 90 days). If it is older, this is not the new hire: drop them.
+   - Their current title must match what the member asked for, and not a "keep out" title.
+   - They must be based where the member said.
+   - For a new hire, their start date in this role must fall inside the number of days the member gave. If it is older, this is not the new hire: drop them.
    - If two people could be the new hire and nothing tells them apart, keep both and set Lead status to `Needs check`. Never guess.
    - Drop anyone already in `leads-seen.csv`.
 4. **Find the work email** from first name, last name and company domain. Work emails only. Never a personal email and never a phone number.
@@ -271,10 +288,11 @@ Only for companies marked `ICP match`. Never spend on people at a `No ICP match`
    - `catch_all` or `unknown` → `risky`
    - `invalid` or `disposable`, or a shared inbox like `info@` → drop the email. Email status `LinkedIn only`.
    - No email found → `LinkedIn only`.
-6. **Write the personal line:** one plain sentence, under 20 words, built only from the real signal. For example: `Congrats on stepping in as Head of Sales at Reco.` or `Saw the €6.5M Series A led by Smartfin, congrats.` No flattery, no guesses, no claims about the company that the source does not support.
+   - Then apply the member's email choices: if they chose valid only, a `risky` email is removed and the person becomes `LinkedIn only`. If they chose not to keep people with no email, drop every `LinkedIn only` person.
+6. **Write the personal line**, only if the member asked for one: one plain sentence, under 20 words, in the member's language, built only from the real signal, and without any words they asked to avoid. For example: `Congrats on stepping in as Head of Sales at Reco.` or `Saw the €6.5M Series A led by Smartfin, congrats.` No flattery, no guesses, no claims the source does not support. If they said no, leave the column blank.
 7. **When nobody can be found:** add no lead. Note the company in the Run log's "Companies with no lead found" count. The company still stays in the Signals tab.
 
-Add up every cost as you go, together with the signal costs. If the running total reaches the daily limit, stop finding people and say how many companies were left without leads.
+Add up every cost as you go, together with the signal costs. Stop finding people when either the daily spend limit or the member's "at most new leads a day" is reached. Work through companies with the most signals first, then the newest, and say in the chat reply how many companies were left without leads.
 
 ### Step 12: Update the sheet, then show the cost again
 
@@ -308,7 +326,8 @@ If nothing new came in, still add the Run log row and say: `Nothing new today. T
 - Use an endpoint that is not in `references/treg-signals.md` or `references/people-and-emails.md`.
 - Put a guess in the personal line. It says only what the signal says.
 - Invent a signal, a date, a funding amount, a company size, an industry, a person, a title or an email.
-- Add a company from the "Do not show" list.
+- Add a company from the "Never show" list.
+- Fill a setup answer with a default, a guess, or an answer from onboarding or the ICP. Every setup answer comes from the member, in this skill's own questionnaire.
 - Add the same signal twice.
 - Call a signal proof that a company will buy.
 - Save a Treg key, a Google password, or any key in the ACX folder or the sheet.

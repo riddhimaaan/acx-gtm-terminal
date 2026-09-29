@@ -37,7 +37,6 @@ Last updated: [date]
 - Google Drive or Sheets: [available, not connected, or not needed yet]
 - Apify: [available, not connected, or not needed yet]
 - Prospeo: [available, not connected, or not needed yet]
-- Treg: [available, not connected, or not needed yet]
 
 ## What we learned later
 [Agents add only durable business facts here. Keep reports in ACX/outputs.]
