@@ -27,7 +27,7 @@ For finding new companies, put every chosen category from signals 3 to 6 into on
 ### Raised money: `getleadsio.companies.funding.feed`
 
 - **Price:** free. Treg allows 5 free calls per team per day, so make one call per run.
-- **Params (query string):** `limit` (1 to 200, use 50), `since` (YYYY-MM-DD, the last run date), `region` (`US`, `EU` or `GLOBAL`, matched to the target locations), `min_confidence` (use 0.7).
+- **Params (query string):** `limit` (1 to 200, use 50), `since` (YYYY-MM-DD, the last run date), `region` (`US` or `EU`, only when the target is in that one region; leave it out otherwise, because `GLOBAL` returned nothing in testing on 2026-09-30), `min_confidence` (use 0.7).
 - **Returns:** `companyName`, `amount`, `currency`, `roundType`, `announcedDate`, `investors`, `sourceUrl`.
 - **Watch out:**
   - There is no website field.
@@ -39,7 +39,7 @@ For finding new companies, put every chosen category from signals 3 to 6 into on
 - **Price:** $0.001 per job returned, plus $0.001 for each job title × location searched.
 - **Query string:** `maxTotalChargeUsd` (required, above 0 and at most 1; set it to this check's share of the daily limit), `timeout` (1 to 90, use 90).
 - **Body:** `jobTitles` (the member's titles), `locations` (LinkedIn place names, such as "United States" or "London"), `postedLimit` (`24h` if the last run was yesterday, otherwise `week`), `sortBy` (`date`), `maxItems` (use 25).
-- **Returns:** the job list directly, including title, company, `linkedinUrl` and `postedDate`.
+- **Returns:** the job list directly, including title, `linkedinUrl` and `postedDate`. The `company` object carries `name`, `website`, `employeeCount` and `industries`. Use these to check size and industry against the target, and to fill in the website.
 - **Watch out:**
   - LinkedIn keyword matching is loose. Drop jobs whose title does not really match what the member asked for.
   - The scraper sometimes fails. Retry once before concluding there are no jobs.

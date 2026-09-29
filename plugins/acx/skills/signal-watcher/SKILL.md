@@ -38,6 +38,7 @@ Signal Watcher needs two connections:
 2. **Composio with Google Sheets** holds the results. Read `references/google-sheet.md`. If the Composio tools are not in this chat, stop and say:
    `Signal Watcher saves your signals to a Google Sheet through Composio. Connect the Composio MCP server in your chat-app connector settings, then connect Google Sheets inside Composio.`
    If Composio is there but Google Sheets is not connected, use Composio's connection tool to start the Google Sheets sign-in. Show the member the sign-in link and wait until they say it is done.
+   If more than one Google Sheets account is connected, list their email addresses and ask: `Which Google account should your signal sheet live in?` Save the chosen account's email and Composio account id in `watch-setup.md` (Step 6), and pass that account on every Google Sheets call from then on.
 
 When both work, mark `Treg` and `Google Sheets (Composio)` as `available` in `ACX/setup-status.md`.
 
@@ -117,11 +118,12 @@ Only now, after every answer is in, build the sheet. Follow `references/google-s
 
 1. If `watch-setup.md` already has a sheet link, use that sheet. Never create a second one.
 2. Create one spreadsheet named `ACX Signals: [business name from my-business.md]`.
-3. Create the four tabs, in order: **Signals**, **Watch list**, **Run log**, **Setup**.
+3. Rename the first tab to **Signals**, then add **Watch list**, **Run log** and **Setup** one at a time, in that order. Adding tabs at the same time puts them in a random order.
 4. Write the header row on each tab, make it bold, and freeze it.
-5. Fill the **Watch list** tab with any named companies from Step 1.
-6. Fill the **Setup** tab with the answers from Steps 1 to 4.
-7. Read the headers back once to check they landed in the right place.
+5. Make the Signals tab's Fit column a dropdown with only two choices: `ICP match` and `No ICP match`.
+6. Fill the **Watch list** tab with any named companies from Step 1.
+7. Fill the **Setup** tab with the answers from Steps 1 to 4.
+8. Read the headers back once to check they landed in the right place.
 
 Give the member the link: `Your signal sheet is ready: [link]. New signals will show up in the Signals tab. You can add companies to the Watch list tab any time.`
 
@@ -138,6 +140,7 @@ Last run: never
 ## Google Sheet
 - Link: [spreadsheet link]
 - Spreadsheet ID: [id]
+- Google account: [email] (Composio account: [account id])
 
 ## Companies to watch
 - Company type: [from Step 1]
@@ -204,18 +207,19 @@ For every result:
 
 1. **Is it a real company?** Drop headlines, investment funds raising their own fund, and rows with no clear company name. Count them as "not a company".
 2. **Find the website** if the source did not give one. Use the source article or a quick web search. If you cannot confirm it, keep the company and write `not confirmed`.
-3. **Does it match the target?** Check it against company type, location, size and the "Do not show" list in the setup. Judge only from what the result, the article or the company's own site says.
-   - Clear match: keep it, with Fit `Match`.
-   - Clear miss: drop it and count the reason.
-   - Not enough information to tell: keep it with Fit `Check fit`. Never guess an industry or size.
-4. **Is it new?** Drop any result whose `signal_id` is already in `seen.csv`. A known company with a new signal still counts as new.
-5. **Drop weak news.** Drop news events with a confidence below 0.7.
+3. **Does it match the target?** Check it against company type, location, size and the "Do not show" list in the setup. Judge only from what the result, the article or the company's own site says. LinkedIn job results include the company's headcount and industry, so use them for hiring signals.
+   - Clear match on every rule: keep it, with Fit `ICP match`.
+   - Clear miss (wrong industry, wrong country, wrong size, on the "Do not show" list): drop it and count the reason.
+   - A real company in the right space, but a rule cannot be confirmed (for example, its size is not stated): keep it with Fit `No ICP match`, and say in "Fits because" what could not be confirmed. Never guess an industry or size to turn it into a match.
+4. **Is it the same news twice?** The same event often arrives from two sources, or from both a market-wide check and the Watch list (for example, one funding round reported by two news sites). When the company, the signal and the date match within a few days, keep one row. Use the most detailed source, and put every record id in Signal ID, separated by ` / `.
+5. **Is it new?** Drop any result whose id is already in `seen.csv`. A known company with a new signal still counts as new.
+6. **Drop weak news.** Drop news events with a confidence below 0.7.
 
 ### Step 11: Update the sheet, then show the cost again
 
 1. **Signals tab:** append one row per new signal, in the column order from `references/google-sheet.md`. Set Status to `New`. Put companies with more than one signal today next to each other.
 2. **Never change rows that are already in the sheet.** The Status and Notes columns belong to the member.
-3. Add every new signal to `ACX/signals/seen.csv`.
+3. Add every new signal to `ACX/signals/seen.csv`, including every id of a merged row.
 4. Check the balance with Treg's `balance` tool again.
 5. **Run log tab:** append one row with today's date, the estimate, the actual spend, the balance before and after, the number of new signals, the number skipped and why, and any checks that did not run.
 6. Set `Last run` in `watch-setup.md` to today.

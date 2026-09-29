@@ -17,6 +17,7 @@ Tool names were checked on 2026-09-30. Before the first call of a run, fetch eac
 | Write the header rows and the Setup tab | `GOOGLESHEETS_UPDATE_VALUES_BATCH` or `GOOGLESHEETS_VALUES_UPDATE` |
 | Add new rows at the bottom | `GOOGLESHEETS_SPREADSHEETS_VALUES_APPEND` |
 | Read the Watch list, or read headers back | `GOOGLESHEETS_BATCH_GET` |
+| Make the Fit column a two-choice dropdown | `GOOGLESHEETS_SET_DATA_VALIDATION_RULE` (`validation_type` `ONE_OF_LIST`, the Signals tab's numeric id, column I = index 8, rows from index 1 down) |
 | Tidy column widths (optional) | `GOOGLESHEETS_AUTO_RESIZE_DIMENSIONS` |
 
 Known problems to avoid:
@@ -25,6 +26,8 @@ Known problems to avoid:
 - **Tab names must match exactly** inside a range, e.g. `'Run log'!A1`. Put names that contain a space in single quotes.
 - **Values must be a list of rows.** Every row in one call must have the same number of cells. Use an empty string for a blank cell, never a missing value.
 - **Append rows one call at a time.** Do not run several appends at once.
+- **Add tabs one at a time.** Tabs added in the same batch land in a random order.
+- **More than one Google account may be connected.** Every call must name the Composio account saved in `watch-setup.md`, or it fails.
 - **Formatting and freezing need the numeric tab id,** not the tab name. Get it from `GOOGLESHEETS_GET_SPREADSHEET_INFO`.
 
 ## Tab 1: Signals
@@ -41,10 +44,10 @@ One row per signal. A company with two signals today gets two rows next to each 
 | F | Signal date | when it happened, YYYY-MM-DD |
 | G | Source link | the article, job post or source URL |
 | H | Fits because | one line against the target, or what is missing |
-| I | Fit | `Match` or `Check fit` |
+| I | Fit | `ICP match` or `No ICP match`. The column is a dropdown with only these two choices. |
 | J | Status | Signal Watcher writes `New`. The member changes it to `Contacted`, `Not a fit`, `Won` or anything they like. |
 | K | Notes | left blank for the member |
-| L | Signal ID | the Treg record id; Signal Watcher uses this to avoid repeats |
+| L | Signal ID | the Treg record id, or several ids separated by ` / ` when the same news came from more than one source; Signal Watcher uses this to avoid repeats |
 
 Signal Watcher only ever adds rows at the bottom of this tab. It never changes an existing row.
 
