@@ -41,6 +41,7 @@ Then check for `my-business.md` in that ACX workspace.
 | 8 | `positioning-builder` | they want to know how competitors position themselves or how to stand apart | a simple competitor breakdown and practical ways to stand apart |
 | 9 | `message-tester` | they have written a message and want to know whether it lands | what sample buyers understood, what confused them, and a clearer version |
 | 10 | `outlier-finder` | they want to see what LinkedIn content is already working in their niche | recent post outliers, the patterns behind them, and usable content angles |
+| 11 | `handwritten-notes` | they have a list with finished, personalised email copy and want each one as a handwritten note image for a cold email or LinkedIn DM | one note image per ready row, plus the list with each row's status and image path |
 
 Run them in that order while the member works through the program. When they ask for one thing on its own, run just that one - but tell them what it leans on, and offer to run that first if it is missing.
 
@@ -60,7 +61,7 @@ The onboarding skill creates this file. If an agent turns up a new durable fact,
 
 Each agent writes one file into `ACX/outputs/`:
 
-`market-scan.md` · `gap-finder.md` · `icp.md` · `graded-list.csv` · `offer.md` · `guarantee.md` · `positioning.md` · `message-test.md`
+`market-scan.md` · `gap-finder.md` · `icp.md` · `graded-list.csv` · `offer.md` · `guarantee.md` · `positioning.md` · `message-test.md` · `handwritten-notes/` (one image per lead and `notes-list.csv`)
 
 Read the files you already have before starting a new agent. That is how context carries forward.
 

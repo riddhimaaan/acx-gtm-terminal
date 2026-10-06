@@ -41,12 +41,13 @@ That is the router. It reads what the member asks, chooses the right skill, and 
 | `positioning-builder` | my positioning, my one-liner |
 | `message-tester` | does this message land |
 | `outlier-finder` | find LinkedIn content angles from posts already working in my niche |
+| `handwritten-notes` | turn the email copy in my lead list into handwritten note images for cold email or LinkedIn DMs |
 
 ## Where your files go
 
 - `ACX/my-business.md` - the member's business details. Every agent reads it, and the router keeps it up to date. Asked once, never twice.
 - `ACX/setup-status.md` - which optional tools are available. No keys are stored here.
-- `ACX/outputs/` - one file per agent: `market-scan.md`, `gap-finder.md`, `icp.md`, `graded-list.csv`, `offer.md`, `guarantee.md`, `positioning.md`, `message-test.md`, `outlier-finder.md`.
+- `ACX/outputs/` - one file per agent: `market-scan.md`, `gap-finder.md`, `icp.md`, `graded-list.csv`, `offer.md`, `guarantee.md`, `positioning.md`, `message-test.md`, `outlier-finder.md`, and the `handwritten-notes/` folder (one note image per lead, plus `notes-list.csv`).
 - `ACX/signals/` - Signal Watcher's setup (`watch-setup.md`) and its memory of what it already reported (`seen.csv`, `leads-seen.csv`), so each daily run adds only what is new.
 - **Your signal sheet** - Signal Watcher's results live in a Google Sheet it creates for the member through Composio: new signals, an import-ready Leads tab (Smartlead field names, checked work emails, a personal line per lead), a watch list the member can edit, and a log of what each run cost.
 

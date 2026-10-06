@@ -3,7 +3,7 @@
 This folder is the product: the single-plugin marketplace members install. `plugins/acx/`
 holds every skill under one plugin, so the whole terminal installs in one command.
 
-Eight of the nine are **forks of public agent skills**. `skills/start/` and `skills/signal-watcher/` are ours. `start` is the
+Eight of the nine are **forks of public agent skills**. `skills/start/`, `skills/signal-watcher/` and `skills/handwritten-notes/` are ours. `start` is the
 router that runs the others in order and carries context between them, because under
 this design the individual skills do not read each other.
 
@@ -43,6 +43,20 @@ In every one:
 Kept verbatim in `_licences/`. Where a repo states a licence only in its README (no
 `LICENSE` file), that is recorded in the table above rather than reproduced. Files a forked
 skill carries that came with their own `LICENSE` keep it in place.
+
+## Handwritten Notes
+
+`skills/handwritten-notes/` is ours. It is the one skill that ships a script (`scripts/notes.py`). Claude runs it, not the member: it checks the copy and draws the note images with Pillow, the standard Python imaging library, installed only after the member says yes.
+
+On first run it downloads five handwriting fonts from Google's official font repository ([google/fonts](https://github.com/google/fonts)). The fonts are not stored in this repo. All five use the SIL Open Font License 1.1, which allows use in images and inside commercial products:
+
+| Font | Designer |
+|---|---|
+| Caveat | Impallari Type |
+| Indie Flower | Kimberly Geswein |
+| Patrick Hand | Patrick Wagesreiter |
+| Shadows Into Light | Kimberly Geswein |
+| Kalam | Indian Type Foundry |
 
 ## Considered and rejected
 
