@@ -1,6 +1,6 @@
 ---
 name: onboarding
-description: "Sets up ACX for a new member. Creates the shared business file, asks only the facts the first skills need, and records optional tools without forcing any connection. Use when a member says \"set me up\", \"onboarding\", \"start ACX\", or when the start skill finds no ACX/my-business.md file."
+description: "Sets up ACX for a new member. Creates the shared business file, asks only the facts the first skills need, reads each named client's website and tags what that company does, and records optional tools without forcing any connection. Use when a member says \"set me up\", \"onboarding\", \"start ACX\", or when the start skill finds no ACX/my-business.md file."
 ---
 
 # ACX Onboarding
@@ -48,14 +48,37 @@ Ask these in pairs. Use the member's own words when saving the answers.
 2. Who usually buys it?
 3. Which countries or regions do you sell in?
 4. What are your website and LinkedIn link, if you have them?
-5. Tell me about up to three clients you enjoyed helping. What did you do for each one?
+5. Which companies have you worked with? Paste up to three names or websites, and say what you did for each one.
 6. Which businesses do buyers compare you with, including doing it themselves or doing nothing?
 7. What do you believe about this market that most people get wrong?
 8. What type of company do you want to work with, and roughly what size are they?
 
 Do not ask a question whose answer is already in the business file.
 
-## Step 3: Check optional tools
+## Step 3: Look up each client and tag it
+
+The member only names the client. You work out what that client does.
+
+1. Visit each client's website. Read the homepage. If the homepage is unclear, read the product page too.
+2. If the member gave a name with no website, search for the company's own site. If more than one company has that name, ask the member which one they mean.
+3. Write two to four short tags for each client. A tag says what the company sells, in words a buyer would search for.
+4. Show the tags to the member like this, and ask them to fix anything wrong:
+
+```text
+Smartlead.ai: email outreach, cold email
+Heyreach.io: LinkedIn automation, LinkedIn outreach
+```
+
+5. Save the confirmed website and tags with that client under `## Best clients` in `ACX/my-business.md`, so no other skill has to look the client up again.
+
+Rules for tags:
+
+- Take every tag from the company's own website. Never tag from the name alone or from what you already know.
+- If a website will not open, say so and ask the member what that company does.
+- If no web-research tool is available in this chat, do not guess. Write `Tags: Not known yet` and tell the member ICP Builder will tag these clients later.
+- Do not ask the member to describe a client whose website you can read.
+
+## Step 4: Check optional tools
 
 Read `references/tools.md`. Tell the member: `You can start without connecting anything. Prospeo is needed before you run Market Scanner.`
 
@@ -72,7 +95,7 @@ If they want to use Market Scanner, explain: `Connect the Prospeo MCP server in 
 
 Do not ask about Signal Watcher here. It has its own questionnaire and checks its own connections when the member first runs it.
 
-## Step 4: Save and finish
+## Step 5: Save and finish
 
 1. Create `ACX/my-business.md` from `references/my-business-template.md`.
 2. Create `ACX/setup-status.md` from `references/setup-status-template.md`.

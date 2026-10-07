@@ -20,9 +20,9 @@ Last updated: [date]
 - LinkedIn: [link or Not known yet]
 
 ## Best clients
-- [Client or client type]: [What I helped them do.]
-- [Client or client type]: [What I helped them do.]
-- [Client or client type]: [What I helped them do.]
+- [Client name] ([website or Not known yet]): [What I helped them do.] Tags: [tag], [tag]
+- [Client name] ([website or Not known yet]): [What I helped them do.] Tags: [tag], [tag]
+- [Client name] ([website or Not known yet]): [What I helped them do.] Tags: [tag], [tag]
 
 ## Other choices buyers consider
 - [Named competitor, doing it in-house, or doing nothing.]

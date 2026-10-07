@@ -42,7 +42,7 @@ Start from deals, not from wishes.
 
 The member only names the client. You work out what that client does.
 
-1. Visit each client's website. Read the homepage. If the homepage is unclear, read the product page too.
+1. If a client in `ACX/my-business.md` already has confirmed tags, reuse them and skip that client. Otherwise visit its website. Read the homepage. If the homepage is unclear, read the product page too.
 2. If the member gave a name with no website, search for the company's own site. If more than one company has that name, ask the member which one they mean.
 3. Write two to four short tags for each client. A tag says what the company sells, in words a buyer would search for.
 4. Show the tags to the member like this, and ask them to fix anything wrong:
